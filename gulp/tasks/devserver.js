@@ -49,6 +49,14 @@ gulp.task('server', function() {
     notify: false,
     ghostMode: false,
     online: true,
+    rewriteRules: [
+      {
+        match: new RegExp('</head>'),
+        fn: function(){
+          return '<script async="" src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="http://localhost:3000/css/index.css">'
+        }
+      }
+    ],
     // tunnel: util.env.tunnel || null
   });
 });

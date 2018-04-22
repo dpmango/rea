@@ -21,6 +21,7 @@ function build(callback) {
     'sprite:svg',
     'sprite:png',
     'sass',
+    'list-pages',
     'copy',
     callback
   );

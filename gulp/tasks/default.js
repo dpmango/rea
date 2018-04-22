@@ -19,6 +19,7 @@ gulp.task('watch',
   ['sass:watch',
   'sprite:svg:watch',
   'sprite:png:watch',
+  'list-pages:watch',
   'copy:watch'
   ]
 );

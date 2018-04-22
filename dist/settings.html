@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://reapay.it-sfera.ru/index.php -->
+<html lang="ru" class="bx-core bx-no-touch bx-no-retina bx-chrome">
+  <head>
+    <!-- this is temp for development -->
+    <base href="http://dev.student.rea.ru/notification_settings/" />
+    <!-- this is temp for development -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200px">
+    <meta name="author" content="IT Sphere">
+    <title>Настройки уведомлений</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/local/templates/reapay_bootstrap_personal/favicon.ico" />
+    <link rel="icon" href="/local/templates/reapay_bootstrap_personal/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link href="/bitrix/js/main/core/css/core.css?15003702513963" type="text/css"  rel="stylesheet" />
+    <link href="/local/components/sebekon/notification.form/templates/.default/style.css?15204185383229" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/fonts/ptsans.css?15136931441314" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/bootstrap.min.css?1513693144120702" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/styles.css?152404686430317" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/flaticon.css?1513693144935" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/jquery.qtip.min.css?15136931449061" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/fonts/flaticon.css?1513693144918" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/custom.css?1513693144746" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/jquery.fancybox.min.3210.css?152262035813735" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/enjoyhint.css?15136931447277" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/components/sebekon/fakultet.selector/templates/.default/style.css?15136931441673" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/template_styles.css?15240457331085" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'955968','SERVER_TIME':'1524426677','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'db3af81fdf26b86a122e0e31674f455c'});</script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core.js?1500370251117643"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_db.js?150037025111148"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?150037025135797"></script>
+    <script type="text/javascript" src="/bitrix/js/main/json/json2.min.js?15003702513467"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?150037025110430"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_fx.js?150037025116888"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?150037025117555"></script>
+    <script type="text/javascript" src="/bitrix/js/main/session.js?15003702513642"></script>
+    <script type="text/javascript" src="/bitrix/js/pull/pull.js?150037025143963"></script>
+    <script type="text/javascript">
+      (function () {
+      	"use strict";
+
+      	var counter = function ()
+      	{
+      		var cookie = (function (name) {
+      			var parts = ("; " + document.cookie).split("; " + name + "=");
+      			if (parts.length == 2) {
+      				try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+      				catch (e) {}
+      			}
+      		})("BITRIX_CONVERSION_CONTEXT_s1");
+
+      		if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME") && cookie.UNIQUE && cookie.UNIQUE.length > 0)
+      		{
+      			for (var i = 0; i < cookie.UNIQUE.length; i++)
+      			{
+      				if (cookie.UNIQUE[i] == "conversion_visit_day")
+      					return;
+      			}
+      		}
+
+      		var request = new XMLHttpRequest();
+      		request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+      		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      		request.send(
+      			"SITE_ID="+encodeURIComponent("s1")+
+      			"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+      			"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+      		);
+      	};
+
+      	if (window.frameRequestStart === true)
+      		BX.addCustomEvent("onFrameDataReceived", counter);
+      	else
+      		BX.ready(counter);
+      })();
+    </script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.js?1513693144282766"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/bootstrap.min.js?151369314437330"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.qtip.min.js?151369314444296"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/bootstrapValidator.min.js?1513693144103245"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/ru_RU.js?151369314416061"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/enjoyhint.js?1513693144174741"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.fancybox.min.3210.js?152262035859714"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/classes/helper.js?15238853734141"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/classes/form.js?15185891391648"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.easydropdown.js?151369314412889"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/main.js?15157307727751"></script>
+    <script type="text/javascript" src="/local/components/sebekon/fakultet.selector/templates/.default/script.js?1515730772768"></script>
+    <script type="text/javascript" src="/local/components/sebekon/notification.form/templates/.default/script.js?15204185382118"></script>
+    <script type="text/javascript">
+      bxSession.mess.messSessExpired = 'Ваш сеанс работы с сайтом завершен из-за отсутствия активности в течение 24 мин. Введенные на странице данные не будут сохранены. Скопируйте их перед тем, как закроете или обновите страницу.';
+      bxSession.Expand(1440, 'db3af81fdf26b86a122e0e31674f455c', true, 'e22b19f2c31d98b4195ae6e40837c73e');
+    </script>
+    <script type="text/javascript">BX.bind(window, "load", function() { BX.PULL.start({'HEADERS':'N','CHANNEL_ID':'c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','CHANNEL_DT':'1524422142/1524405842','USER_ID':'955968','LAST_ID':'0','PATH':'https://#DOMAIN#/bitrix/sub/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_MOD':'https://#DOMAIN#/bitrix/sub/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_WS':'wss://#DOMAIN#/bitrix/subws/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_COMMAND':'','METHOD':'LONG','REVISION':'14','ERROR':''}); });</script>
+    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "4e4b5016e66f581569e62bb2f75c69a8"]); _ba.push(["host", "dev.student.rea.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+  </head>
+  <body role="document">
+    <div class="areaForLoader" id="areaForLoader">
+      <div class="preloader">
+        <img src="/images/preloader.gif" alt="preloader">
+      </div>
+    </div>
+    <div class="top-black-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2">
+            <ul class="lang-selector">
+              <li class="active">Рус</li>
+              <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
+              <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-7">
+            <ul class="main-website-menu">
+              <li ><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
+              <li ><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
+              <li ><a href="http://alumni.rea.ru/">Выпускникам</a></li>
+              <li ><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <div class="top-search">
+              <input id="header-search" type="text" placeholder="Поиск по сайту" onkeydown="if (event.keyCode==13) return cabinetsearch(value);">
+              <button class="top-search-btn" onclick="">
+              <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="es-header-wrapper">
+      <div class="es-header-left">
+        <div class="es-headlogowrap">
+          <a href="/"><img src="/local/templates/reapay_bootstrap_personal/images/logo.jpg" class="img-responsive"></a>
+        </div>
+        <div class="es-logotextwrap">
+          <h1>
+            <span>Российский экономический</span> УНИВЕРСИТЕТ имени Г.В. Плеханова
+          </h1>
+        </div>
+      </div>
+      <div class="es-userinfowrap">
+        <div class="es-user__info">
+          <div class="es-user__info__student">
+            <div class="es-user__info__student-avatar">
+              <img src="/upload/resize_cache/main/05b/50_50_2/05b3efc20eaa46d83fd0abdc543f7780.jpg" border=0 class='img-responsive img-circle' alt="" width="50" height="50" />
+            </div>
+            <div class="es-user__info__student-name">
+              <a href="/personal/">
+              Иванов Иван Иванович                        </a>
+            </div>
+          </div>
+          <div class="es-user__info__login">
+            <a href="/?logout=yes">
+            <span>
+            Выйти                    </span>
+            </a>
+          </div>
+        </div>
+        <div class="es-user__notification">
+          Вы выключили уведомления на e-mail!
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default bluemenu">
+      <div class="container">
+        <div class="breadcrumb-wrapper">
+          <ol class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Настройки уведомлений</li>
+          </ol>
+          <div class="breadcrumb__fakultet">
+            <span class="breadcrumb__fakultet-label">Выбрано:</span>
+            <a href="#fakultet_selector" rel="nofollow" class="breadcrumb__fakultet__popup" id="faculty_selector_link">
+            3-й курс,                         финансовый факультет        </a>
+          </div>
+          <div id="fakultet_selector" class="fakultet__selector">
+            <div class="fakultet__selector__title">
+              Выберите профиль студента
+            </div>
+            <div class="fakultet__selector__default">Выберите студента, который будет использоваться по умолчанию при открытии
+              <br> личного кабинета.
+            </div>
+            <div class="fakultet__selector__items">
+              <div class="fakultet__selector__item">
+                <input id="fakultet_1414:24" type="radio" value="radio" name="fakultet"
+                  data-url="/notification_settings/?student_id=1414"  checked>
+                <label class="fakultet__selector__item-label" for="fakultet_1414:24">
+                финансовый факультет                    </label>
+                <div class="fakultet__selector_profile">
+                  Экономика<br>
+                  Финансы и кредит
+                </div>
+              </div>
+              <div class="fakultet__selector__item">
+                <input id="fakultet_1415:24" type="radio" value="radio" name="fakultet"
+                  data-url="/notification_settings/?student_id=1415"  >
+                <label class="fakultet__selector__item-label" for="fakultet_1415:24">
+                факультет дистанционного обучения                    </label>
+                <div class="fakultet__selector_profile">
+                  Менеджмент<br>
+                  Управление проектами
+                </div>
+              </div>
+            </div>
+            <div class="fakultet__selector__button" >
+              <span data-fakultet-continue>
+              ПРОДОЛЖИТЬ
+              </span>
+            </div>
+          </div>
+          <script>
+            SebekonHelper.isFacultySelectShow = true;
+
+          </script>
+        </div>
+      </div>
+    </nav>
+    <div class="es-theme-showcase">
+      <div class="es-rightmenu">
+        <ul>
+          <li  >
+            <a href="/personal/">
+            Личные данные                </a>
+          </li>
+          <li  >
+            <a href="/progress/">
+            Успеваемость                </a>
+          </li>
+          <li  >
+            <a href="/request/" data-request="Y">
+            Справки                </a>
+          </li>
+          <li  >
+            <a href="/lessons/">
+            Расписание                </a>
+          </li>
+          <li  >
+            <a href="/appeal/">
+            Обращения                </a>
+          </li>
+          <li  >
+            <a href="/ads/" data-ads="Y">
+            Объявления                </a>
+          </li>
+          <li  >
+            <a href="/curriculum/">
+            Учебный план                </a>
+          </li>
+          <li  >
+            <a href="/portfolio/">
+            Портфолио                </a>
+          </li>
+          <li  >
+            <a href="/ito/">
+            Индивидуальная траектория обучения                </a>
+          </li>
+          <li class="active" >
+            <a href="/notification_settings/">
+            Настройки уведомлений                </a>
+          </li>
+          <li  >
+            <a href="https://www.rea.ru/ru/org/managements/biblcentr/Pages/resources.aspx">
+            Электронные библиотечные системы                </a>
+          </li>
+          <li  >
+            <a href="http://lms.rea.ru/">
+            Электронные образовательные ресурсы                </a>
+          </li>
+          <li  >
+            <a href="http://job.rea.ru/">
+            Практика и трудоустройство                </a>
+          </li>
+          <li  >
+            <a href="https://cabinet.rea.ru" target="_blank">
+            Оплата услуг                </a>
+          </li>
+          <li  >
+            <a href="http://portfolio.rea.ru/">
+            Портфолио до 23.04.18 г.                </a>
+          </li>
+        </ul>
+        <script>
+          $(document).ready(function() {
+
+
+                  });
+        </script>
+      </div>
+      <div class="es-right-column">
+        <a href="#" class="instruction">Инструкция</a>
+        <div class="es-notification-wrap">
+          <h1 class="es-notification__title">
+            Настройки уведомлений
+          </h1>
+          <div class="es-notification__tab">
+            <form action="/ajax/add_notification_email.php" method="post">
+              <div class="es-notification__tab-body">
+                <div class="es-notification__tab-body-item" data-notification-table>
+                  <div class="es-notification__line">
+                    <div class="es-notification__line-item es-notification__email">Email</div>
+                    <div class="es-notification__line-item es-notification__ads">Для объявления</div>
+                  </div>
+                  <div class="es-notification__line">
+                    <div class="es-notification__line-item es-notification__email">
+                      Основной - Ivanov@rambler.ru
+                    </div>
+                    <div class="es-notification__line-item es-notification__ads notification__item--checkbox">
+                      <input type="checkbox" id="main_ads_email" name="main_ads_email"
+                        class="notification__input_checkbox" data-ads>
+                      <label for="main_ads_email" class="notification__label"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="es-notification__tab-footnote">
+                <button class="es-btn-blue" data-formsend="Y">
+                Сохранить                </button>
+              </div>
+            </form>
+          </div>
+          <div id="notification__after_request" class="notification__confirm" style="display: none">
+            <div class="notification__confirm__content" id="notification_request__content">
+            </div>
+            <div class="notification__confirm__button">
+              <div class="notification__confirm__button-ok" data-notification-confirm-close>
+                Закрыть
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            В Личном кабинете обучаемого
+            принимаются к оплате карты
+            следующих платежных систем:
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-2">
+            <a
+              href="/appeal/"
+              class="support-link"
+              >
+            Техподдержка
+            </a>
+            <br>
+            <a
+              href="#"
+              class="support-link"
+              >
+            Помощь
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

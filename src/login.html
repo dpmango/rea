@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://reapay.it-sfera.ru/index.php -->
+<html lang="en" class="bx-core bx-no-touch bx-no-retina bx-chrome">
+  <head>
+    <!-- this is temp for development -->
+    <base href="http://dev.student.rea.ru/" />
+    <!-- this is temp for development -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200px">
+    <meta name="author" content="IT Sphere">
+    <title>Авторизация</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link href="/bitrix/js/main/core/css/core.css?15003702513963" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/.default/components/bitrix/system.pagenavigation/.default/style.css?15003702911394" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/fonts/ptsans.css?15003702911314" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/css/bootstrap.min.css?1500370291120702" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/css/styles.css?150670186311523" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/css/flaticon.css?1500370291935" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/css/jquery.qtip.min.css?15003702919061" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/fonts/flaticon.css?1500370291918" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap/css/custom.css?1501154005619" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1524424488','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'db3af81fdf26b86a122e0e31674f455c'});</script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core.js?1500370251117643"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_db.js?150037025111148"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?150037025135797"></script>
+    <script type="text/javascript" src="/bitrix/js/main/json/json2.min.js?15003702513467"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?150037025110430"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_fx.js?150037025116888"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?150037025117555"></script>
+    <script type="text/javascript">
+      (function () {
+      	"use strict";
+
+      	var counter = function ()
+      	{
+      		var cookie = (function (name) {
+      			var parts = ("; " + document.cookie).split("; " + name + "=");
+      			if (parts.length == 2) {
+      				try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+      				catch (e) {}
+      			}
+      		})("BITRIX_CONVERSION_CONTEXT_s1");
+
+      		if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME") && cookie.UNIQUE && cookie.UNIQUE.length > 0)
+      		{
+      			for (var i = 0; i < cookie.UNIQUE.length; i++)
+      			{
+      				if (cookie.UNIQUE[i] == "conversion_visit_day")
+      					return;
+      			}
+      		}
+
+      		var request = new XMLHttpRequest();
+      		request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+      		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      		request.send(
+      			"SITE_ID="+encodeURIComponent("s1")+
+      			"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+      			"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+      		);
+      	};
+
+      	if (window.frameRequestStart === true)
+      		BX.addCustomEvent("onFrameDataReceived", counter);
+      	else
+      		BX.ready(counter);
+      })();
+    </script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/jquery.js?1500370291282766"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/bootstrap.min.js?150037029137330"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/jquery.qtip.min.js?150037029144296"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/bootstrapValidator.min.js?1500370291103245"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/ru_RU.js?150037029116061"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap/js/main.js?15003702914378"></script>
+    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "4e4b5016e66f581569e62bb2f75c69a8"]); _ba.push(["host", "dev.student.rea.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+  </head>
+  <body role="document">
+    <div class="top-black-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2">
+            <ul class="lang-selector">
+              <li class="active">Рус</li>
+              <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
+              <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-7">
+            <ul class="main-website-menu">
+              <li ><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
+              <li ><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
+              <li ><a href="http://alumni.rea.ru/">Выпускникам</a></li>
+              <li ><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <div class="top-search">
+              <input id="header-search" type="text" placeholder="Поиск по сайту" onkeydown="if (event.keyCode==13) return cabinetsearch(value);">
+              <button class="top-search-btn" onclick="">
+              <i class="glyphicon glyphicon-search"></i>
+              </button>
+              <script>
+                function cabinetsearch(val)
+                {
+                    document.location.href= "http://www.rea.ru/ru/Pages/Search/results.aspx#k="+val;
+                }
+
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="absolute">
+        </div>
+      </div>
+    </div>
+    <div class="container header-wrapper">
+      <div class="row">
+        <div class="col-xs-2 headlogowrap">
+          <a href="/"><img src="/local/templates/reapay_bootstrap/images/logo.jpg" class="img-responsive"></a>
+        </div>
+        <div class="col-xs-6 logotextwrap">
+          <h1>
+            <span class="header-mid-logo-title-name">Российский экономический</span>
+            <span class="header-mid-logo-title-big-font">УНИВЕРСИТЕТ</span>
+            <br>
+            <span class="header-mid-logo-title-name">имени Г.В. Плеханова</span>
+          </h1>
+        </div>
+        <div class="col-xs-4 userinfowrap">
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default bluemenu">
+      <div class="container">
+        <div class="breadcrumb-wrapper">
+        </div>
+      </div>
+    </nav>
+    <div class="container theme-showcase" role="main">
+      <div class="row">
+        <div class="col-xs-6">
+          <h2>Авторизация</h2>
+          <form name="form_auth" method="post" target="_top" action="/index.php?login=yes">
+            <input type="hidden" name="AUTH_FORM" value="Y" />
+            <input type="hidden" name="TYPE" value="AUTH" />
+            <input type="hidden" name="backurl" value="/index.php" />
+            <div class="form-group">
+              <p><a href="http://id.rea.ru">Получить/восстановить логин и пароль</a></p>
+            </div>
+            <div class="form-group">
+              <label for="login">Логин:</label>
+              <input type="text" name="USER_LOGIN" class="form-control" id="login" placeholder="Ivanov.I" value="">
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль:</label>
+              <input type="password" name="USER_PASSWORD" class="form-control" id="password" placeholder="Пароль">
+            </div>
+            <div class="clear"></div>
+            <div class="checkbox">
+              <input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y" /> <label for="USER_REMEMBER">Запомнить меня на этом компьютере</label>
+            </div>
+            <input type="submit" name="Login" value="Войти" class="btn btn-primary"/>
+          </form>
+          <script type="text/javascript">
+            try{document.form_auth.USER_LOGIN.focus();}catch(e){}
+          </script>
+        </div>
+        <div class="col-xs-6">
+          <div class="newsblock">
+            <h2>Новости и события</h2>
+            <div class="newsitem"  id="bx_3218110189_40">
+              <p class="date">20 августа</p>
+              <a href="/news/40/">Встречайте! Телеграм канал РЭУ! Новости, нововведения, полезная информация. Присоединяйтесь! https://t.me/Plehanova_Channel</a>
+            </div>
+            <div class="newsitem"  id="bx_3218110189_5">
+              <p class="date">14 июня</p>
+              <a href="/news/5/">Вышел 22-ый выпуск аналитического бюллетеня РЭУ им. Г.В. Плеханова «Анализ трендов денежно-кредитной системы и финансовых рынков»</a>
+            </div>
+            <div class="newsitem"  id="bx_3218110189_4">
+              <p class="date">13 июня</p>
+              <a href="/news/4/">Факультеты РЭУ вошли в рейтинг лучших факультетов вузов Москвы по версии портала Career.ru</a>
+            </div>
+            <a href="/news/">
+            Все новости <span>→</span>
+            </a>
+          </div>
+        </div>
+        <script type="text/javascript">
+          try{document.form_auth.USER_PASSWORD.focus();}catch(e){}
+        </script>
+      </div>
+      <script type="text/javascript">
+        try{document.form_auth.USER_PASSWORD.focus();}catch(e){}
+      </script>
+    </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            В Личном кабинете обучаемого
+            принимаются к оплате карты
+            следующих платежных систем:
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-2 tex-link">
+            <a
+              href="mailto:lks-temp@rea.ru"
+              class="support-link"
+              >
+            Техподдержка
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

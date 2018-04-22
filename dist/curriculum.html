@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://reapay.it-sfera.ru/index.php -->
+<html lang="ru" class="bx-core bx-no-touch bx-no-retina bx-chrome">
+  <head>
+    <!-- this is temp for development -->
+    <base href="http://dev.student.rea.ru/curriculum/" />
+    <!-- this is temp for development -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200px">
+    <meta name="author" content="IT Sphere">
+    <title>Учебный план</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/local/templates/reapay_bootstrap_personal/favicon.ico" />
+    <link rel="icon" href="/local/templates/reapay_bootstrap_personal/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link href="/bitrix/js/main/core/css/core.css?15003702513963" type="text/css"  rel="stylesheet" />
+    <link href="/local/components/sebekon/curriculum/templates/.default/style.css?15161878674163" type="text/css"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/fonts/ptsans.css?15136931441314" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/bootstrap.min.css?1513693144120702" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/styles.css?152404686430317" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/flaticon.css?1513693144935" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/jquery.qtip.min.css?15136931449061" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/fonts/flaticon.css?1513693144918" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/custom.css?1513693144746" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/jquery.fancybox.min.3210.css?152262035813735" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/css/enjoyhint.css?15136931447277" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/components/sebekon/fakultet.selector/templates/.default/style.css?15136931441673" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <link href="/local/templates/reapay_bootstrap_personal/template_styles.css?15240457331085" type="text/css"  data-template-style="true"  rel="stylesheet" />
+    <script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'PULL_OLD_REVISION':'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'});</script>
+    <script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'955968','SERVER_TIME':'1524426304','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'db3af81fdf26b86a122e0e31674f455c'});</script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core.js?1500370251117643"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_db.js?150037025111148"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?150037025135797"></script>
+    <script type="text/javascript" src="/bitrix/js/main/json/json2.min.js?15003702513467"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?150037025110430"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_fx.js?150037025116888"></script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.js?150037025117555"></script>
+    <script type="text/javascript" src="/bitrix/js/main/session.js?15003702513642"></script>
+    <script type="text/javascript" src="/bitrix/js/pull/pull.js?150037025143963"></script>
+    <script type="text/javascript">
+      (function () {
+      	"use strict";
+
+      	var counter = function ()
+      	{
+      		var cookie = (function (name) {
+      			var parts = ("; " + document.cookie).split("; " + name + "=");
+      			if (parts.length == 2) {
+      				try {return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));}
+      				catch (e) {}
+      			}
+      		})("BITRIX_CONVERSION_CONTEXT_s1");
+
+      		if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME") && cookie.UNIQUE && cookie.UNIQUE.length > 0)
+      		{
+      			for (var i = 0; i < cookie.UNIQUE.length; i++)
+      			{
+      				if (cookie.UNIQUE[i] == "conversion_visit_day")
+      					return;
+      			}
+      		}
+
+      		var request = new XMLHttpRequest();
+      		request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+      		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      		request.send(
+      			"SITE_ID="+encodeURIComponent("s1")+
+      			"&sessid="+encodeURIComponent(BX.bitrix_sessid())+
+      			"&HTTP_REFERER="+encodeURIComponent(document.referrer)
+      		);
+      	};
+
+      	if (window.frameRequestStart === true)
+      		BX.addCustomEvent("onFrameDataReceived", counter);
+      	else
+      		BX.ready(counter);
+      })();
+    </script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.js?1513693144282766"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/bootstrap.min.js?151369314437330"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.qtip.min.js?151369314444296"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/bootstrapValidator.min.js?1513693144103245"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/ru_RU.js?151369314416061"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/enjoyhint.js?1513693144174741"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.fancybox.min.3210.js?152262035859714"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/classes/helper.js?15238853734141"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/classes/form.js?15185891391648"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/jquery.easydropdown.js?151369314412889"></script>
+    <script type="text/javascript" src="/local/templates/reapay_bootstrap_personal/js/main.js?15157307727751"></script>
+    <script type="text/javascript" src="/local/components/sebekon/fakultet.selector/templates/.default/script.js?1515730772768"></script>
+    <script type="text/javascript">
+      bxSession.mess.messSessExpired = 'Ваш сеанс работы с сайтом завершен из-за отсутствия активности в течение 24 мин. Введенные на странице данные не будут сохранены. Скопируйте их перед тем, как закроете или обновите страницу.';
+      bxSession.Expand(1440, 'db3af81fdf26b86a122e0e31674f455c', true, 'e22b19f2c31d98b4195ae6e40837c73e');
+    </script>
+    <script type="text/javascript">BX.bind(window, "load", function() { BX.PULL.start({'HEADERS':'N','CHANNEL_ID':'c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','CHANNEL_DT':'1524422142/1524405842','USER_ID':'955968','LAST_ID':'0','PATH':'https://#DOMAIN#/bitrix/sub/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_MOD':'https://#DOMAIN#/bitrix/sub/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_WS':'wss://#DOMAIN#/bitrix/subws/?CHANNEL_ID=c422ab75e50ae8369a6dcd2f3f268594.c8c5a33df3b218d5f87cbeaadf0d9d8221810a07/96599b7aff99272e8416ce3f79a837c1.bd01e29fd3bc58149c312870acf4aa850553999a','PATH_COMMAND':'','METHOD':'LONG','REVISION':'14','ERROR':''}); });</script>
+    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "4e4b5016e66f581569e62bb2f75c69a8"]); _ba.push(["host", "dev.student.rea.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+  </head>
+  <body role="document">
+    <div class="areaForLoader" id="areaForLoader">
+      <div class="preloader">
+        <img src="/images/preloader.gif" alt="preloader">
+      </div>
+    </div>
+    <div class="top-black-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-2">
+            <ul class="lang-selector">
+              <li class="active">Рус</li>
+              <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
+              <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-7">
+            <ul class="main-website-menu">
+              <li ><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
+              <li ><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
+              <li ><a href="http://alumni.rea.ru/">Выпускникам</a></li>
+              <li ><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <div class="top-search">
+              <input id="header-search" type="text" placeholder="Поиск по сайту" onkeydown="if (event.keyCode==13) return cabinetsearch(value);">
+              <button class="top-search-btn" onclick="">
+              <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="es-header-wrapper">
+      <div class="es-header-left">
+        <div class="es-headlogowrap">
+          <a href="/"><img src="/local/templates/reapay_bootstrap_personal/images/logo.jpg" class="img-responsive"></a>
+        </div>
+        <div class="es-logotextwrap">
+          <h1>
+            <span>Российский экономический</span> УНИВЕРСИТЕТ имени Г.В. Плеханова
+          </h1>
+        </div>
+      </div>
+      <div class="es-userinfowrap">
+        <div class="es-user__info">
+          <div class="es-user__info__student">
+            <div class="es-user__info__student-avatar">
+              <img src="/upload/resize_cache/main/05b/50_50_2/05b3efc20eaa46d83fd0abdc543f7780.jpg" border=0 class='img-responsive img-circle' alt="" width="50" height="50" />
+            </div>
+            <div class="es-user__info__student-name">
+              <a href="/personal/">
+              Иванов Иван Иванович                        </a>
+            </div>
+          </div>
+          <div class="es-user__info__login">
+            <a href="/?logout=yes">
+            <span>
+            Выйти                    </span>
+            </a>
+          </div>
+        </div>
+        <div class="es-user__notification">
+          Вы выключили уведомления на e-mail!
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default bluemenu">
+      <div class="container">
+        <div class="breadcrumb-wrapper">
+          <ol class="breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li class="active">Учебный план</li>
+          </ol>
+          <div class="breadcrumb__fakultet">
+            <span class="breadcrumb__fakultet-label">Выбрано:</span>
+            <a href="#fakultet_selector" rel="nofollow" class="breadcrumb__fakultet__popup" id="faculty_selector_link">
+            3-й курс,                         финансовый факультет        </a>
+          </div>
+          <div id="fakultet_selector" class="fakultet__selector">
+            <div class="fakultet__selector__title">
+              Выберите профиль студента
+            </div>
+            <div class="fakultet__selector__default">Выберите студента, который будет использоваться по умолчанию при открытии
+              <br> личного кабинета.
+            </div>
+            <div class="fakultet__selector__items">
+              <div class="fakultet__selector__item">
+                <input id="fakultet_1414:24" type="radio" value="radio" name="fakultet"
+                  data-url="/curriculum/?student_id=1414"  checked>
+                <label class="fakultet__selector__item-label" for="fakultet_1414:24">
+                финансовый факультет                    </label>
+                <div class="fakultet__selector_profile">
+                  Экономика<br>
+                  Финансы и кредит
+                </div>
+              </div>
+              <div class="fakultet__selector__item">
+                <input id="fakultet_1415:24" type="radio" value="radio" name="fakultet"
+                  data-url="/curriculum/?student_id=1415"  >
+                <label class="fakultet__selector__item-label" for="fakultet_1415:24">
+                факультет дистанционного обучения                    </label>
+                <div class="fakultet__selector_profile">
+                  Менеджмент<br>
+                  Управление проектами
+                </div>
+              </div>
+            </div>
+            <div class="fakultet__selector__button" >
+              <span data-fakultet-continue>
+              ПРОДОЛЖИТЬ
+              </span>
+            </div>
+          </div>
+          <script>
+            SebekonHelper.isFacultySelectShow = true;
+
+          </script>
+        </div>
+      </div>
+    </nav>
+    <div class="es-theme-showcase">
+      <div class="es-rightmenu">
+        <ul>
+          <li  >
+            <a href="/personal/">
+            Личные данные                </a>
+          </li>
+          <li  >
+            <a href="/progress/">
+            Успеваемость                </a>
+          </li>
+          <li  >
+            <a href="/request/" data-request="Y">
+            Справки                </a>
+          </li>
+          <li  >
+            <a href="/lessons/">
+            Расписание                </a>
+          </li>
+          <li  >
+            <a href="/appeal/">
+            Обращения                </a>
+          </li>
+          <li  >
+            <a href="/ads/" data-ads="Y">
+            Объявления                </a>
+          </li>
+          <li class="active" >
+            <a href="/curriculum/">
+            Учебный план                </a>
+          </li>
+          <li  >
+            <a href="/portfolio/">
+            Портфолио                </a>
+          </li>
+          <li  >
+            <a href="/ito/">
+            Индивидуальная траектория обучения                </a>
+          </li>
+          <li  >
+            <a href="/notification_settings/">
+            Настройки уведомлений                </a>
+          </li>
+          <li  >
+            <a href="https://www.rea.ru/ru/org/managements/biblcentr/Pages/resources.aspx">
+            Электронные библиотечные системы                </a>
+          </li>
+          <li  >
+            <a href="http://lms.rea.ru/">
+            Электронные образовательные ресурсы                </a>
+          </li>
+          <li  >
+            <a href="http://job.rea.ru/">
+            Практика и трудоустройство                </a>
+          </li>
+          <li  >
+            <a href="https://cabinet.rea.ru" target="_blank">
+            Оплата услуг                </a>
+          </li>
+          <li  >
+            <a href="http://portfolio.rea.ru/">
+            Портфолио до 23.04.18 г.                </a>
+          </li>
+        </ul>
+        <script>
+          $(document).ready(function() {
+
+
+                  });
+        </script>
+      </div>
+      <div class="es-right-column">
+        <a href="#" class="instruction">Инструкция</a>
+        <div class="es-curriculum-wrap">
+          <h1 class="es-curriculum__title">
+            Учебный план
+          </h1>
+          <div class="es-curriculum__tab">
+            <div class="es-curriculum__tab-head">
+              <a class="es-curriculum__btn" href="/curriculum/storage/">
+              Рабочие программы дисциплин            </a>
+              <div class="es-curriculum__tab-head__selector">
+                <div class="es-curriculum__tab-head__item">
+                  <label for="curriculum_branch" class="es-curriculum__tab-head__item__label">Курс: </label>
+                  <select id="curriculum_branch" class="es-curriculum__tab-head__item_selector">
+                    <option value=""></option>
+                    <option                                          value="1" >1-й курс</option>
+                    <option                                          value="2" >2-й курс</option>
+                    <option  selected                                        value="3" >3-й курс</option>
+                    <option                                          value="4" >4-й курс</option>
+                  </select>
+                </div>
+                <div class="es-curriculum__tab-head__item">
+                  <label for="curriculum_semester" class="es-curriculum__tab-head__item__label">Семестр: </label>
+                  <select id="curriculum_semester" class="es-curriculum__tab-head__item_selector">
+                    <option value=""></option>
+                    <option                                                 value="0" >5-й семестр</option>
+                    <option selected                                                value="1" >6-й семестр</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="es-curriculum__tab-body">
+              <div class="es-curriculum__tab-body-item" data-curriculum-table>
+                <div class="es-curriculum__line">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Шифр
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Наименование дисциплин/ практики/ГИА
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness" >
+                    Трудо- емкость, З.Е.
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__several-items">
+                    <div class="es-curriculum__several_title">
+                      Трудоемкость в часах
+                    </div>
+                    <div class="es-curriculum__several_content">
+                      <div class="es-curriculum__line-item es-curriculum__total">
+                        Всего
+                      </div>
+                      <div class="es-curriculum__line-item es-curriculum__control">
+                        Конт.
+                      </div>
+                      <div class="es-curriculum__line-item es-curriculum__lectures">
+                        Лекц.
+                      </div>
+                      <div class="es-curriculum__line-item es-curriculum__practical">
+                        Пр.
+                      </div>
+                      <div class="es-curriculum__line-item es-curriculum__laboratory">
+                        Лаб.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="es-curriculum__line-iteme es-curriculum__form" >
+                    Форма контроля
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.Б.19
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Физическая культура и спорт (модуль)
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    328
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    58
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    58
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.Б.19.2
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Элективные дисциплины по физической культуре
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    0
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    328
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    58
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    58
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Зачет
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.Б.3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Иностранный язык
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    180
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    48
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    48
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.Б.3.3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Иностранный язык. Часть III
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    180
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    48
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    48
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Экзамен
+                  </div>
+                </div>
+                <div class="es-curriculum__line es-curriculum__line-italic">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ДВ.4
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Моделирование финансовой деятельности компаний
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    4
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    144
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    42
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    18
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    24
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Экзамен
+                  </div>
+                </div>
+                <div class="es-curriculum__line es-curriculum__line-italic">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ДВ.4
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Математические методы финансового анализа
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    4
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    144
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    42
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    18
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    24
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Экзамен
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ОД.10
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Страхование
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    5
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    180
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    56
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    20
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    36
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Экзамен
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ОД.11
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Корпоративные финансы
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    5
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    180
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    56
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    20
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    36
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Экзамен
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ОД.12
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Государственные и муниципальные финансы
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    5
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    180
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    56
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    20
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    36
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Дифференцированный зачет, Курсовая работа
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ОД.13
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Ценообразование
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    4
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    324
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    40
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    18
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    22
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Зачет
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б1.В.ОД.8
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Финансовые вычисления
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    108
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    36
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    14
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    22
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Дифференцированный зачет
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    Б2.У.1
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Практика по получению первичных профессиональных умений и навыков
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    3
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Зачет
+                  </div>
+                </div>
+                <div class="es-curriculum__line ">
+                  <div class="es-curriculum__line-item es-curriculum__cipher">
+                    ФТД.В.1
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__discipline">
+                    Психология бизнеса
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboriousness">
+                    2
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__total">
+                    72
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__control">
+                    18
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__lectures">
+                    6
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__practical">
+                    12
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__laboratory">
+                    -
+                  </div>
+                  <div class="es-curriculum__line-item es-curriculum__form">
+                    Зачет
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="es-curriculum__tab-footnote">
+              Примечание: Курсивом выделяются дисциплины по выбору.<br>
+              В соответствии с локальными нормативными документами допускается перемещение и изменение интенсивности изучения дисциплины в пределах одного учебного года.
+            </div>
+          </div>
+        </div>
+        <script>
+          (function ($) {
+
+              var branches = {"1":{"VALUE":"1-\u0439 \u043a\u0443\u0440\u0441","SEMESTER":["1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440"]},"2":{"VALUE":"2-\u0439 \u043a\u0443\u0440\u0441","SEMESTER":["3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440"]},"3":{"VALUE":"3-\u0439 \u043a\u0443\u0440\u0441","SEMESTER":["5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440"]},"4":{"VALUE":"4-\u0439 \u043a\u0443\u0440\u0441","SEMESTER":["7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440"]}},
+                  items = {"1-\u0439 \u043a\u0443\u0440\u0441":{"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d","UF_DISCIPLINE_TWO":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.1","UF_CIPHER_TWO":"\u04111.\u0411.1.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f","UF_CIPHER":"\u04111.\u0411.1.1"}]},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.12","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_CIPHER":"\u04111.\u0411.12"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"1","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"12","UF_SELF_STUDY":"36","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430","UF_CIPHER":"\u04111.\u0411.19.1"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"0","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"54","UF_PRACTICAL":"54","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c I","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"42","UF_PRACTICAL":"42","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c I","UF_CIPHER":"\u04111.\u0411.3.1"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"22","UF_SELF_STUDY":"56","UF_PRACTICAL":"34","UF_LABORATORY":"-","UF_TOTAL":"324","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.4","UF_CIPHER_TWO":"\u04111.\u0411.4.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_CIPHER":"\u04111.\u0411.4.1"},{"UF_DISCIPLINE_ONE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u041b\u0438\u043d\u0435\u0439\u043d\u0430\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"28","UF_SELF_STUDY":"56","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.4","UF_CIPHER_TWO":"\u04111.\u0411.4.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041b\u0438\u043d\u0435\u0439\u043d\u0430\u044f \u0430\u043b\u0433\u0435\u0431\u0440\u0430","UF_CIPHER":"\u04111.\u0411.4.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u0422\u0435\u043e\u0440\u0438\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0438","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"42","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.5","UF_CIPHER_TWO":"\u04111.\u0411.5.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0422\u0435\u043e\u0440\u0438\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0438","UF_CIPHER":"\u04111.\u0411.5.1"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b","UF_DISCIPLINE_TWO":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0432 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0435","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"4","UF_SELF_STUDY":"28","UF_PRACTICAL":"-","UF_LABORATORY":"24","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.6","UF_CIPHER_TWO":"\u04111.\u0411.6.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0432 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0435","UF_CIPHER":"\u04111.\u0411.6.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_DISCIPLINE_TWO":"\u041c\u0430\u043a\u0440\u043e\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"6","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"42","UF_SELF_STUDY":"98","UF_PRACTICAL":"56","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.8","UF_CIPHER_TWO":"\u04111.\u0411.8.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0430\u043a\u0440\u043e\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.8.2"}]}],"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d","UF_DISCIPLINE_TWO":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0438","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.1","UF_CIPHER_TWO":"\u04111.\u0411.1.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0438","UF_CIPHER":"\u04111.\u0411.1.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"1","UF_FORM_OF_CONTROL":"","UF_LECTURES":"12","UF_SELF_STUDY":"36","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430","UF_CIPHER":"\u04111.\u0411.19.1"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"","UF_FORM_OF_CONTROL":"","UF_LECTURES":"-","UF_SELF_STUDY":"54","UF_PRACTICAL":"54","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c I","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"42","UF_PRACTICAL":"42","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c I","UF_CIPHER":"\u04111.\u0411.3.1"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"30","UF_SELF_STUDY":"70","UF_PRACTICAL":"40","UF_LABORATORY":"-","UF_TOTAL":"324","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.4","UF_CIPHER_TWO":"\u04111.\u0411.4.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_CIPHER":"\u04111.\u0411.4.1"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b","UF_DISCIPLINE_TWO":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"4","UF_SELF_STUDY":"42","UF_PRACTICAL":"-","UF_LABORATORY":"38","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.6","UF_CIPHER_TWO":"\u04111.\u0411.6.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438","UF_CIPHER":"\u04111.\u0411.6.1"}]},{"UF_DISCIPLINE_ONE":"\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0436\u0438\u0437\u043d\u0435\u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0441\u0442\u044c \u0436\u0438\u0437\u043d\u0435\u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_CIPHER":"\u04111.\u0411.7"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_DISCIPLINE_TWO":"\u041c\u0438\u043a\u0440\u043e\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"6","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"42","UF_SELF_STUDY":"98","UF_PRACTICAL":"56","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.8","UF_CIPHER_TWO":"\u04111.\u0411.8.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0438\u043a\u0440\u043e\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.8.1"}]},{"UF_DISCIPLINE_ONE":"\u042d\u0442\u0438\u043a\u0430 \u0434\u0435\u043b\u043e\u0432\u044b\u0445 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0439","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u042d\u0442\u0438\u043a\u0430 \u0434\u0435\u043b\u043e\u0432\u044b\u0445 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u0439","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.1"},{"UF_DISCIPLINE_ONE":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u0430\u043d\u0442\u0438\u043a\u043e\u0440\u0440\u0443\u043f\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u0430\u043d\u0442\u0438\u043a\u043e\u0440\u0440\u0443\u043f\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.1"},{"UF_DISCIPLINE_ONE":"\u041f\u0440\u0430\u0432\u043e","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041f\u0440\u0430\u0432\u043e","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.1"},{"UF_DISCIPLINE_ONE":"\u041f\u0441\u0438\u0445\u043e\u043b\u043e\u0433\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"1-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.3","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041f\u0441\u0438\u0445\u043e\u043b\u043e\u0433\u0438\u044f","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.3"}]},"2-\u0439 \u043a\u0443\u0440\u0441":{"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0435\u0442\u0440\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.10","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0435\u0442\u0440\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.10"},{"UF_DISCIPLINE_ONE":"\u041c\u0430\u0440\u043a\u0435\u0442\u0438\u043d\u0433","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.11","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0430\u0440\u043a\u0435\u0442\u0438\u043d\u0433","UF_CIPHER":"\u04111.\u0411.11"},{"UF_DISCIPLINE_ONE":"\u041c\u0438\u0440\u043e\u0432\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0438 \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.14","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041c\u0438\u0440\u043e\u0432\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0438 \u043c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f","UF_CIPHER":"\u04111.\u0411.14"},{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0444\u0438\u0440\u043c\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.17","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0444\u0438\u0440\u043c\u044b","UF_CIPHER":"\u04111.\u0411.17"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"0","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"54","UF_PRACTICAL":"54","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c II","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"-","UF_SELF_STUDY":"42","UF_PRACTICAL":"42","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c II","UF_CIPHER":"\u04111.\u0411.3.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_DISCIPLINE_TWO":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0443\u0447\u0435\u043d\u0438\u0439","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.8","UF_CIPHER_TWO":"\u04111.\u0411.8.3","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0443\u0447\u0435\u043d\u0438\u0439","UF_CIPHER":"\u04111.\u0411.8.3"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437","UF_DISCIPLINE_TWO":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"34","UF_PRACTICAL":"20","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.9","UF_CIPHER_TWO":"\u04111.\u0411.9.1","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442","UF_CIPHER":"\u04111.\u0411.9.1"}]},{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"34","UF_PRACTICAL":"20","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.16","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.16"},{"UF_DISCIPLINE_ONE":"\u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u0432 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u044e: \u043e\u0441\u043d\u043e\u0432\u044b \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438, \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u043d\u0430\u0443\u0447\u043d\u043e-\u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.5","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u0432 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u044e: \u043e\u0441\u043d\u043e\u0432\u044b \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438, \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u043d\u0430\u0443\u0447\u043d\u043e-\u0438\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u0441\u043a\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.5"},{"UF_DISCIPLINE_ONE":"\u041f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0432 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"34","UF_PRACTICAL":"20","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.6","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0432 \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0435","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.6"}],"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"UF_DISCIPLINE_ONE":"\u0420\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.13","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0420\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.13"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"26","UF_SELF_STUDY":"56","UF_PRACTICAL":"30","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.15","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u044b","UF_CIPHER":"\u04111.\u0411.15"},{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0442\u0440\u0443\u0434\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"26","UF_SELF_STUDY":"56","UF_PRACTICAL":"30","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.16","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0442\u0440\u0443\u0434\u0430","UF_CIPHER":"\u04111.\u0411.16"},{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0444\u0438\u0440\u043c\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.17","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430 \u0444\u0438\u0440\u043c\u044b","UF_CIPHER":"\u04111.\u0411.17"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"","UF_FORM_OF_CONTROL":"","UF_LECTURES":"-","UF_SELF_STUDY":"54","UF_PRACTICAL":"54","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043b\u043e\u0441\u043e\u0444\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"14","UF_SELF_STUDY":"42","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.2","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0424\u0438\u043b\u043e\u0441\u043e\u0444\u0438\u044f","UF_CIPHER":"\u04111.\u0411.2"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c II","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"42","UF_PRACTICAL":"42","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c II","UF_CIPHER":"\u04111.\u0411.3.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u0422\u0435\u043e\u0440\u0438\u044f \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u0435\u0439 \u0438 \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"28","UF_SELF_STUDY":"62","UF_PRACTICAL":"34","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.4","UF_CIPHER_TWO":"\u04111.\u0411.4.3","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0422\u0435\u043e\u0440\u0438\u044f \u0432\u0435\u0440\u043e\u044f\u0442\u043d\u043e\u0441\u0442\u0435\u0439 \u0438 \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.4.3"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_DISCIPLINE_TWO":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.5","UF_CIPHER_TWO":"\u04111.\u0411.5.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.5.2"}]},{"UF_DISCIPLINE_ONE":"\u0421\u043e\u0446\u0438\u043e\u043b\u043e\u0433\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"2-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.2","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0421\u043e\u0446\u0438\u043e\u043b\u043e\u0433\u0438\u044f","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.2"}]},"3-\u0439 \u043a\u0443\u0440\u0441":{"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"UF_DISCIPLINE_ONE":"\u041d\u0430\u043b\u043e\u0433\u0438 \u0438 \u043d\u0430\u043b\u043e\u0433\u043e\u043e\u0431\u043b\u043e\u0436\u0435\u043d\u0438\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"34","UF_PRACTICAL":"20","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.18","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u041d\u0430\u043b\u043e\u0433\u0438 \u0438 \u043d\u0430\u043b\u043e\u0433\u043e\u043e\u0431\u043b\u043e\u0436\u0435\u043d\u0438\u0435","UF_CIPHER":"\u04111.\u0411.18"},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"","UF_FORM_OF_CONTROL":"","UF_LECTURES":"-","UF_SELF_STUDY":"54","UF_PRACTICAL":"54","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c III","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"42","UF_PRACTICAL":"42","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.3","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c III","UF_CIPHER":"\u04111.\u0411.3.3"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_DISCIPLINE_TWO":"\u0418\u043d\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"36","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.8","UF_CIPHER_TWO":"\u04111.\u0411.8.4","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0430","UF_CIPHER":"\u04111.\u0411.8.4"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437","UF_DISCIPLINE_TWO":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.9","UF_CIPHER_TWO":"\u04111.\u0411.9.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0430\u043d\u0430\u043b\u0438\u0437","UF_CIPHER":"\u04111.\u0411.9.2"}]},{"UF_DISCIPLINE_ONE":"\u0420\u0438\u0441\u043a-\u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"36","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.3","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0420\u0438\u0441\u043a-\u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.3"},{"UF_DISCIPLINE_ONE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0432 \u043d\u0430\u043b\u043e\u0433\u043e\u043e\u0431\u043b\u043e\u0436\u0435\u043d\u0438\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"36","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.3","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0432 \u043d\u0430\u043b\u043e\u0433\u043e\u043e\u0431\u043b\u043e\u0436\u0435\u043d\u0438\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.3"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0435 \u043f\u0440\u0430\u0432\u043e","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"14","UF_SELF_STUDY":"36","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.17","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0435 \u043f\u0440\u0430\u0432\u043e","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.17"},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0442\u043e\u0434\u044b \u043c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"34","UF_PRACTICAL":"20","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.4","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041c\u0435\u0442\u043e\u0434\u044b \u043c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u043a\u0438","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.4"},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0442\u043e\u0434\u044b \u043e\u043f\u0442\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"48","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041c\u0435\u0442\u043e\u0434\u044b \u043e\u043f\u0442\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.7"},{"UF_DISCIPLINE_ONE":"\u0414\u0435\u043d\u044c\u0433\u0438, \u043a\u0440\u0435\u0434\u0438\u0442, \u0431\u0430\u043d\u043a\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.9","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0414\u0435\u043d\u044c\u0433\u0438, \u043a\u0440\u0435\u0434\u0438\u0442, \u0431\u0430\u043d\u043a\u0438","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.9"}],"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_DISCIPLINE_TWO":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"0","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"58","UF_PRACTICAL":"58","UF_LABORATORY":"-","UF_TOTAL":"328","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.19","UF_CIPHER_TWO":"\u04111.\u0411.19.2","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u042d\u043b\u0435\u043a\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435","UF_CIPHER":"\u04111.\u0411.19.2"}]},{"IS_MODULE":true,"ITEMS":[{"UF_DISCIPLINE_ONE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_DISCIPLINE_TWO":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c III","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"-","UF_SELF_STUDY":"48","UF_PRACTICAL":"48","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0411.3","UF_CIPHER_TWO":"\u04111.\u0411.3.3","UF_COMPONENT":"\u0411\u0430\u0437\u043e\u0432\u0430\u044f \u0447\u0430\u0441\u0442\u044c","UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a. \u0427\u0430\u0441\u0442\u044c III","UF_CIPHER":"\u04111.\u0411.3.3"}]},{"UF_DISCIPLINE_ONE":"\u041c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.4","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u043e\u0434\u0435\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0439","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.4"},{"UF_DISCIPLINE_ONE":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043c\u0435\u0442\u043e\u0434\u044b \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0433\u043e \u0430\u043d\u0430\u043b\u0438\u0437\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.4","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043c\u0435\u0442\u043e\u0434\u044b \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0433\u043e \u0430\u043d\u0430\u043b\u0438\u0437\u0430","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.4"},{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.10","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.10"},{"UF_DISCIPLINE_ONE":"\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.11","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.11"},{"UF_DISCIPLINE_ONE":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0438 \u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.12","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0438 \u043c\u0443\u043d\u0438\u0446\u0438\u043f\u0430\u043b\u044c\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.12"},{"UF_DISCIPLINE_ONE":"\u0426\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"18","UF_SELF_STUDY":"40","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"324","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.13","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0426\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.13"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"36","UF_PRACTICAL":"22","UF_LABORATORY":"-","UF_TOTAL":"108","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.8","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0432\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u044f","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.8"},{"UF_DISCIPLINE_ONE":"","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"-","UF_PRACTICAL":"-","UF_LABORATORY":"-","UF_TOTAL":"-","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04112.\u0423.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041f\u0440\u0430\u043a\u0442\u0438\u043a\u0430 \u043f\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044e \u043f\u0435\u0440\u0432\u0438\u0447\u043d\u044b\u0445 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0443\u043c\u0435\u043d\u0438\u0439 \u0438 \u043d\u0430\u0432\u044b\u043a\u043e\u0432","UF_DISCIPLINE":"\u041f\u0440\u0430\u043a\u0442\u0438\u043a\u0430 \u043f\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044e \u043f\u0435\u0440\u0432\u0438\u0447\u043d\u044b\u0445 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0443\u043c\u0435\u043d\u0438\u0439 \u0438 \u043d\u0430\u0432\u044b\u043a\u043e\u0432","UF_CIPHER":"\u04112.\u0423.1"},{"UF_DISCIPLINE_ONE":"\u041f\u0441\u0438\u0445\u043e\u043b\u043e\u0433\u0438\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430","UF_DISCIPLINE_TWO":"","UF_BRANCH":"3-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"6","UF_SELF_STUDY":"18","UF_PRACTICAL":"12","UF_LABORATORY":"-","UF_TOTAL":"72","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u0424\u0422\u0414.\u0412.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0424\u0430\u043a\u0443\u043b\u044c\u0442\u0430\u0442\u0438\u0432\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041f\u0441\u0438\u0445\u043e\u043b\u043e\u0433\u0438\u044f \u0431\u0438\u0437\u043d\u0435\u0441\u0430","UF_CIPHER":"\u0424\u0422\u0414.\u0412.1"}]},"4-\u0439 \u043a\u0443\u0440\u0441":{"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0439 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.2","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0439 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.2"},{"UF_DISCIPLINE_ONE":"\u0410\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u0434\u0435\u043b\u043e \u0438 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.2","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0410\u043a\u0446\u0438\u043e\u043d\u0435\u0440\u043d\u043e\u0435 \u0434\u0435\u043b\u043e \u0438 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.2"},{"UF_DISCIPLINE_ONE":"\u0412\u0430\u043b\u044e\u0442\u043d\u044b\u0439 \u0440\u044b\u043d\u043e\u043a","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"38","UF_PRACTICAL":"18","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.5","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0412\u0430\u043b\u044e\u0442\u043d\u044b\u0439 \u0440\u044b\u043d\u043e\u043a","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.5"},{"UF_DISCIPLINE_ONE":"\u041d\u0430\u043b\u043e\u0433\u043e\u0432\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0437\u0430\u0440\u0443\u0431\u0435\u0436\u043d\u044b\u0445 \u0441\u0442\u0440\u0430\u043d","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"38","UF_PRACTICAL":"18","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.5","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041d\u0430\u043b\u043e\u0433\u043e\u0432\u044b\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0437\u0430\u0440\u0443\u0431\u0435\u0436\u043d\u044b\u0445 \u0441\u0442\u0440\u0430\u043d","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.5"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.6","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u0430\u044f \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.6"},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u0432\u0430\u043b\u044e\u0442\u043d\u043e-\u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0435 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.6","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u0432\u0430\u043b\u044e\u0442\u043d\u043e-\u043a\u0440\u0435\u0434\u0438\u0442\u043d\u044b\u0435 \u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.6"},{"UF_DISCIPLINE_ONE":"\u041c\u0438\u0440\u043e\u0432\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0440\u044b\u043d\u043a\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0438\u0440\u043e\u0432\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0440\u044b\u043d\u043a\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.7"},{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435 \u0432\u043e \u0432\u043d\u0435\u0448\u043d\u0435\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"2","UF_FORM_OF_CONTROL":"\u0417\u0430\u0447\u0435\u0442","UF_LECTURES":"14","UF_SELF_STUDY":"28","UF_PRACTICAL":"14","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435 \u0432\u043e \u0432\u043d\u0435\u0448\u043d\u0435\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.7"},{"UF_DISCIPLINE_ONE":"\u0426\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d, \u041a\u0443\u0440\u0441\u043e\u0432\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"20","UF_SELF_STUDY":"56","UF_PRACTICAL":"36","UF_LABORATORY":"-","UF_TOTAL":"324","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.13","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0426\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.13"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"20","UF_SELF_STUDY":"48","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.14","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.14"},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"7-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"20","UF_SELF_STUDY":"48","UF_PRACTICAL":"28","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04111.\u0412.\u041e\u0414.15","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b","UF_DISCIPLINE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u044b","UF_CIPHER":"\u04111.\u0412.\u041e\u0414.15"}],"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440":[{"UF_DISCIPLINE_ONE":"\u041c\u0438\u0440\u043e\u0432\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0440\u044b\u043d\u043a\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0438\u0440\u043e\u0432\u044b\u0435 \u0444\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0435 \u0440\u044b\u043d\u043a\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.7"},{"UF_DISCIPLINE_ONE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435 \u0432\u043e \u0432\u043d\u0435\u0448\u043d\u0435\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"216","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.7","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u0435 \u0432\u043e \u0432\u043d\u0435\u0448\u043d\u0435\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.7"},{"UF_DISCIPLINE_ONE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0435 \u0446\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.8","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041c\u0435\u0436\u0434\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0435 \u0446\u0435\u043d\u043e\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.8"},{"UF_DISCIPLINE_ONE":"\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0444\u043e\u043d\u0434\u043e\u0432\u044b\u043c \u043f\u043e\u0440\u0442\u0444\u0435\u043b\u0435\u043c","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"4","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"144","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.8","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0444\u043e\u043d\u0434\u043e\u0432\u044b\u043c \u043f\u043e\u0440\u0442\u0444\u0435\u043b\u0435\u043c","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.8"},{"UF_DISCIPLINE_ONE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u0440\u0438\u0441\u043a-\u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.9","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u044b\u0439 \u0440\u0438\u0441\u043a-\u043c\u0435\u043d\u0435\u0434\u0436\u043c\u0435\u043d\u0442","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.9"},{"UF_DISCIPLINE_ONE":"\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u043d\u0430 \u0440\u044b\u043d\u043a\u0435 \u0446\u0435\u043d\u043d\u044b\u0445 \u0431\u0443\u043c\u0430\u0433","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"5","UF_FORM_OF_CONTROL":"\u042d\u043a\u0437\u0430\u043c\u0435\u043d","UF_LECTURES":"18","UF_SELF_STUDY":"42","UF_PRACTICAL":"24","UF_LABORATORY":"-","UF_TOTAL":"180","UF_ELECTIVE":"1","UF_CIPHER_ONE":"\u04111.\u0412.\u0414\u0412.9","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0414\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d\u044b \u043f\u043e \u0432\u044b\u0431\u043e\u0440\u0443","UF_DISCIPLINE":"\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u043d\u0430 \u0440\u044b\u043d\u043a\u0435 \u0446\u0435\u043d\u043d\u044b\u0445 \u0431\u0443\u043c\u0430\u0433","UF_CIPHER":"\u04111.\u0412.\u0414\u0412.9"},{"UF_DISCIPLINE_ONE":"","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"6","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"-","UF_PRACTICAL":"-","UF_LABORATORY":"-","UF_TOTAL":"-","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04112.\u041f.1","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041f\u0440\u0430\u043a\u0442\u0438\u043a\u0430 \u043f\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044e \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0443\u043c\u0435\u043d\u0438\u0439 \u0438 \u043e\u043f\u044b\u0442\u0430 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_DISCIPLINE":"\u041f\u0440\u0430\u043a\u0442\u0438\u043a\u0430 \u043f\u043e \u043f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u044e \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0443\u043c\u0435\u043d\u0438\u0439 \u0438 \u043e\u043f\u044b\u0442\u0430 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438","UF_CIPHER":"\u04112.\u041f.1"},{"UF_DISCIPLINE_ONE":"","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"3","UF_FORM_OF_CONTROL":"\u0414\u0438\u0444\u0444\u0435\u0440\u0435\u043d\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0437\u0430\u0447\u0435\u0442","UF_LECTURES":"-","UF_SELF_STUDY":"-","UF_PRACTICAL":"-","UF_LABORATORY":"-","UF_TOTAL":"-","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04112.\u041f.2","UF_CIPHER_TWO":"","UF_COMPONENT":"\u041f\u0440\u0435\u0434\u0434\u0438\u043f\u043b\u043e\u043c\u043d\u0430\u044f","UF_DISCIPLINE":"\u041f\u0440\u0435\u0434\u0434\u0438\u043f\u043b\u043e\u043c\u043d\u0430\u044f","UF_CIPHER":"\u04112.\u041f.2"},{"UF_DISCIPLINE_ONE":"","UF_DISCIPLINE_TWO":"","UF_BRANCH":"4-\u0439 \u043a\u0443\u0440\u0441","UF_SEMESTER":"8-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u0440","UF_LABORIOUSNESS":"6","UF_FORM_OF_CONTROL":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0439 \u0430\u0442\u0442\u0435\u0441\u0442\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0439 \u044d\u043a\u0437\u0430\u043c\u0435\u043d, \u0412\u044b\u043f\u0443\u0441\u043a\u043d\u0430\u044f \u043a\u0432\u0430\u043b\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430","UF_LECTURES":"-","UF_SELF_STUDY":"-","UF_PRACTICAL":"-","UF_LABORATORY":"-","UF_TOTAL":"-","UF_ELECTIVE":"0","UF_CIPHER_ONE":"\u04113","UF_CIPHER_TWO":"","UF_COMPONENT":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u0418\u0442\u043e\u0433\u043e\u0432\u0430\u044f \u0410\u0442\u0442\u0435\u0441\u0442\u0430\u0446\u0438\u044f","UF_DISCIPLINE":"\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0435\u043d\u043d\u0430\u044f \u0418\u0442\u043e\u0433\u043e\u0432\u0430\u044f \u0410\u0442\u0442\u0435\u0441\u0442\u0430\u0446\u0438\u044f","UF_CIPHER":"\u04113"}]}},
+                  modules = {"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.1","UF_LABORIOUSNESS":3,"UF_TOTAL":108,"UF_SELF_STUDY":28,"UF_LECTURES":14,"UF_PRACTICAL":14,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":1,"UF_TOTAL":400,"UF_SELF_STUDY":90,"UF_LECTURES":12,"UF_PRACTICAL":78,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":2,"UF_TOTAL":144,"UF_SELF_STUDY":42,"UF_LECTURES":"-","UF_PRACTICAL":42,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u04302-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.4","UF_LABORIOUSNESS":9,"UF_TOTAL":468,"UF_SELF_STUDY":112,"UF_LECTURES":50,"UF_PRACTICAL":62,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u04302-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.5","UF_LABORIOUSNESS":3,"UF_TOTAL":108,"UF_SELF_STUDY":42,"UF_LECTURES":20,"UF_PRACTICAL":22,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.6","UF_LABORIOUSNESS":2,"UF_TOTAL":72,"UF_SELF_STUDY":28,"UF_LECTURES":4,"UF_PRACTICAL":"-","UF_LABORATORY":24,"UF_FORM_OF_CONTROL":""},"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f2-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.8","UF_LABORIOUSNESS":6,"UF_TOTAL":216,"UF_SELF_STUDY":98,"UF_LECTURES":42,"UF_PRACTICAL":56,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0426\u0438\u043a\u043b \u0438\u0441\u0442\u043e\u0440\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0434\u0438\u0441\u0446\u0438\u043f\u043b\u0438\u043d","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.1","UF_LABORIOUSNESS":2,"UF_TOTAL":72,"UF_SELF_STUDY":28,"UF_LECTURES":14,"UF_PRACTICAL":14,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":1,"UF_TOTAL":400,"UF_SELF_STUDY":90,"UF_LECTURES":12,"UF_PRACTICAL":78,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":2,"UF_TOTAL":144,"UF_SELF_STUDY":42,"UF_LECTURES":"-","UF_PRACTICAL":42,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u04301-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.4","UF_LABORIOUSNESS":4,"UF_TOTAL":324,"UF_SELF_STUDY":70,"UF_LECTURES":30,"UF_PRACTICAL":40,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u044b","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.6","UF_LABORIOUSNESS":4,"UF_TOTAL":144,"UF_SELF_STUDY":42,"UF_LECTURES":4,"UF_PRACTICAL":"-","UF_LABORATORY":38,"UF_FORM_OF_CONTROL":""},"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f1-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04401-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.8","UF_LABORIOUSNESS":6,"UF_TOTAL":216,"UF_SELF_STUDY":98,"UF_LECTURES":42,"UF_PRACTICAL":56,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":"-","UF_TOTAL":328,"UF_SELF_STUDY":54,"UF_LECTURES":"-","UF_PRACTICAL":54,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":3,"UF_TOTAL":180,"UF_SELF_STUDY":42,"UF_LECTURES":"-","UF_PRACTICAL":42,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f4-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.8","UF_LABORIOUSNESS":2,"UF_TOTAL":72,"UF_SELF_STUDY":28,"UF_LECTURES":14,"UF_PRACTICAL":14,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u04374-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.9","UF_LABORIOUSNESS":3,"UF_TOTAL":108,"UF_SELF_STUDY":34,"UF_LECTURES":14,"UF_PRACTICAL":20,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":"-","UF_TOTAL":328,"UF_SELF_STUDY":54,"UF_LECTURES":"-","UF_PRACTICAL":54,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a3-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":2,"UF_TOTAL":180,"UF_SELF_STUDY":42,"UF_LECTURES":"-","UF_PRACTICAL":42,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u04303-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0412\u044b\u0441\u0448\u0430\u044f \u043c\u0430\u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.4","UF_LABORIOUSNESS":4,"UF_TOTAL":144,"UF_SELF_STUDY":62,"UF_LECTURES":28,"UF_PRACTICAL":34,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u04303-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04402-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.5","UF_LABORIOUSNESS":4,"UF_TOTAL":144,"UF_SELF_STUDY":56,"UF_LECTURES":20,"UF_PRACTICAL":36,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":"-","UF_TOTAL":328,"UF_SELF_STUDY":54,"UF_LECTURES":"-","UF_PRACTICAL":54,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":2,"UF_TOTAL":180,"UF_SELF_STUDY":42,"UF_LECTURES":"-","UF_PRACTICAL":42,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f5-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u042d\u043a\u043e\u043d\u043e\u043c\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0442\u0435\u043e\u0440\u0438\u044f","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.8","UF_LABORIOUSNESS":2,"UF_TOTAL":72,"UF_SELF_STUDY":36,"UF_LECTURES":14,"UF_PRACTICAL":22,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u04375-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0441\u043a\u0438\u0439 \u0443\u0447\u0435\u0442 \u0438 \u0430\u043d\u0430\u043b\u0438\u0437","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.9","UF_LABORIOUSNESS":2,"UF_TOTAL":72,"UF_SELF_STUDY":28,"UF_LECTURES":14,"UF_PRACTICAL":14,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0438 \u0441\u043f\u043e\u0440\u0442 (\u043c\u043e\u0434\u0443\u043b\u044c)","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.19","UF_LABORIOUSNESS":"-","UF_TOTAL":328,"UF_SELF_STUDY":58,"UF_LECTURES":"-","UF_PRACTICAL":58,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""},"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a6-\u0439 \u0441\u0435\u043c\u0435\u0441\u0442\u04403-\u0439 \u043a\u0443\u0440\u0441":{"UF_DISCIPLINE":"\u0418\u043d\u043e\u0441\u0442\u0440\u0430\u043d\u043d\u044b\u0439 \u044f\u0437\u044b\u043a","UF_ELECTIVE":"0","UF_CIPHER":"\u04111.\u0411.3","UF_LABORIOUSNESS":3,"UF_TOTAL":180,"UF_SELF_STUDY":48,"UF_LECTURES":"-","UF_PRACTICAL":48,"UF_LABORATORY":"-","UF_FORM_OF_CONTROL":""}};
+
+              /**
+               *
+               * Формирует и выводит новые данные в таблицу с дисциплинами, затирая старые
+               *
+               * @param branch - выбранный курс
+               * @param semester - семестер
+               */
+              function showNewTableContent(branch, semester)
+              {
+                  var newContnet = $('<div></div>'),
+                      tableLine = '';
+
+                  for(var key in items[branch][semester])
+                  {
+                      var arItem = items[branch][semester][key];
+
+                      if(arItem['IS_MODULE'] !== undefined)
+                      {
+                          var firstElement = arItem['ITEMS'][0];
+                          tableLine = getTableLine(modules[firstElement['UF_DISCIPLINE_ONE'] + firstElement['UF_SEMESTER'] + firstElement['UF_BRANCH']]);
+
+                          arItem['ITEMS'].forEach(function (arElement) {
+                              tableLine += getTableLine(arElement);
+                          })
+                      }
+                      else
+                      {
+                          tableLine = getTableLine(arItem);
+                      }
+                      newContnet.append(tableLine);
+                  };
+                  var tableContent = $('[data-curriculum-table]');
+
+                  //очищение таблицы кроме первой строки - заголовков
+                  tableContent.children().not(":eq(0)").remove();
+
+                  tableContent.append(newContnet.html());
+              }
+
+              function getTableLine(arItem)
+              {
+                  var italicClass = '',
+                      tableLine = '';
+
+                  if(arItem['UF_ELECTIVE'] === '1')
+                  {
+                      italicClass = 'es-curriculum__line-italic';
+                  }
+
+                  tableLine = '<div class="es-curriculum__line ' + italicClass +'">' +
+                      '<div class="es-curriculum__line-item es-curriculum__cipher" >' + arItem["UF_CIPHER"] + '</div>' +
+                      '<div class="es-curriculum__line-item es-curriculum__discipline" >' + arItem["UF_DISCIPLINE"] + '</div>' +
+                      '<div class="es-curriculum__line-item es-curriculum__laboriousness" >' + arItem["UF_LABORIOUSNESS"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__total" >' + arItem["UF_TOTAL"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__control" >' + arItem["UF_SELF_STUDY"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__lectures" >' + arItem["UF_LECTURES"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__practical" >' + arItem["UF_PRACTICAL"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__laboratory" >' + arItem["UF_LABORATORY"] + '</div>' +
+                      '<div class="es-curriculum__line-iteme es-curriculum__form" >' + arItem["UF_FORM_OF_CONTROL"] + '</div>' +
+                      '</div>';
+                  return tableLine;
+              }
+
+              $(function () {
+
+                  var selectorBranch = $('#curriculum_branch'),
+                      selectorSemester = $('#curriculum_semester');
+
+                  selectorBranch.on('change', function () {
+
+                      var selectedVal = $(this).find('option:selected').val(),
+                          semesterContent = '<option value=""></option>';
+
+                      for(var key in branches[selectedVal]['SEMESTER'])
+                      {
+                          var selected = '',
+                              semester = branches[selectedVal]['SEMESTER'][key];
+
+                          if(+key === 0)
+                          {
+                              selected = 'selected';
+                              showNewTableContent(branches[selectedVal]['VALUE'], semester);
+                          }
+
+                          semesterContent += '<option value="' + key + '" ' + selected + '>' + semester + '</option>';
+                      }
+
+                      selectorSemester.easyDropDown('destroy');
+                      selectorSemester.html(semesterContent);
+                      selectorSemester.easyDropDown();
+                  });
+
+                  selectorSemester.on('change', function () {
+                      var selectedBranch = selectorBranch.find('option:selected').text(),
+                          selectedSemester = $(this).find('option:selected').text();
+                      showNewTableContent(selectedBranch, selectedSemester);
+                  });
+
+              });
+
+          })($);
+        </script>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            В Личном кабинете обучаемого
+            принимаются к оплате карты
+            следующих платежных систем:
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/visa_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mc_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-1">
+            <img src="/images/mir_v.png" class="img-responsive" />
+          </div>
+          <div class="col-sm-2">
+            <a
+              href="/appeal/"
+              class="support-link"
+              >
+            Техподдержка
+            </a>
+            <br>
+            <a
+              href="#"
+              class="support-link"
+              >
+            Помощь
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -37,6 +37,7 @@
     "postcss-short": "^4.1.0",
     "postcss-sorting": "^3.1.0",
     "require-dir": "^0.3.2",
+    "require-yaml": "^0.0.1",
     "run-sequence": "^2.2.0",
     "serve-static": "^1.13.1",
     "through2": "^2.0.3",
