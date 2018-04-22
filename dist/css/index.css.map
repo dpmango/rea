@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/_responsive.sass"],"names":[],"mappings":"AAAA;EACE,sBAAqB;CAAI","file":"index.css","sourcesContent":["body {\n  background-color: red; }\n"]}

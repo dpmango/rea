@@ -1,0 +1,54 @@
+.request__content__result, .request__content__data{
+	margin-top: 40px;
+}
+.request__content__result__title, .request__content__data__title{
+	font-size: 22px;
+}
+.request__content__result__table, .request__content__data__table{
+	margin-top: 40px;
+}
+.request__content__back{
+	margin-top: 50px;
+}
+.request__content__back__link{
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(121, 121, 121, 1);
+	border-radius: 5px;
+	color: #333333;
+	font-family: 'Arial Обычный', 'Arial';
+	font-weight: 400;
+	font-size: 13px;
+	padding: 10px;
+	text-transform: uppercase;
+}
+.request__content__back__link:hover, .request__content__back__link:focus{
+	text-decoration: none;
+	cursor: pointer;
+	color: #333333;
+}
+.request__table{
+	width: 100%;
+}
+.request__table__img{
+	margin-left: 10px;
+}
+.request__table td{
+	font-family: 'Arial Обычный', 'Arial';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	padding: 10px 10px 10px 0;
+}
+.request__table .request__table__th{
+	color: #999999;
+	width: 35%;
+}
+.request__table__th.second{
+	width: 15%;
+	min-width: 107px;
+}
+.request__table tr td:last-child{
+	min-width: 130px;
+	padding-right: 0;
+
+}

@@ -1,0 +1,51 @@
+.rightmenu {
+    width: 100%;
+}
+
+.breadcrumb-wrapper .breadcrumb {
+    padding: 8px 0px;
+    margin-bottom: 0;
+    background-color: #0b2d50;
+}
+
+.breadcrumb-wrapper .breadcrumb  a {
+    color:#fff;
+}
+
+.breadcrumb>.active {
+    color:#fff;
+}
+
+.breadcrumb>li+li:before {
+    content: "\2192";
+    padding: 0 5px;
+    color: #ccc;
+}
+
+.bluemenu ul li.active a {
+    color: #7ca9df;
+}
+
+.blue-menu-wrapper a{
+    font: normal 13px 'PT Sans', sans-serif;
+}
+
+
+.remove-personal-photo {
+    position: absolute;
+    width: 40px;
+    right:0px;
+    top:0px;
+}
+.remove-personal-photo a {
+    display: block;
+    text-align: center
+}
+
+.es-training__title-hint-close-dummy {
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
