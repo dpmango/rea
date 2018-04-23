@@ -53,7 +53,7 @@ gulp.task('server', function() {
       {
         match: new RegExp('</head>'),
         fn: function(){
-          return '<script async="" src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="http://localhost:3000/css/index.css">'
+          return '<script async="" src="http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="http://localhost:3000/css/index.css"><script type="text/javascript" src="http://localhost:3000/js/responsive.js"></script>'
         }
       }
     ],

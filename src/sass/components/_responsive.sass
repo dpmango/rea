@@ -1,2 +1,178 @@
+// REWRITES
 body
   // background-color: red
+  min-width: 320px
+
+.container
+  max-width: 980px
+  width: 100% !important
+  padding-left: 20px
+  padding-right: 20px
+  +r(767)
+    padding-left: 10px
+    padding-right: 10px
+
+.col
+  padding-left: 15px
+  padding-right: 15px
+  flex: 0 1 auto
+  width: 100%
+  min-width: 1px
+  min-height: 0px
+
+// UTILS
+.show-desktop
+  display: none
+  +rmin($desktop)
+    display: block
+
+.show-tablet
+  display: block
+  +rmin($desktop)
+    display: none
+
+.show-mobile
+  display: block
+  +rmin($tablet)
+    display: none
+
+.ico
+  fill: currentColor
+
+
+// GENERAL ELEMENTS
+
++r(767)
+  h2
+    font-size: 22px
+    margin-bottom: 0.5em
+  .form-group
+    margin-bottom: 15px
+    label
+      padding: 5px 0
+      font-size: 14px
+  .form-control
+    padding-top: 8px
+    padding-bottom: 8px
+    height: 40px
+  form input[type="submit"], form a.btn
+    float: none
+    width: 100%
+  .btn
+    font-size: 14px
+    padding-top: 9px
+    padding-bottom: 9px
+    border-radius: 4px
+
+
+  /* NEWS
+  .newsblock
+    position: relative
+    margin-top: 30px
+    padding-top: 10px
+    &::before
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 1px
+      background: #d9dee2
+  .newsitem
+    padding: 5px 0
+    border: 0
+  .newsblock .newsitem:last-of-type
+    padding-bottom: 15px
+
+
+  .container.theme-showcase
+    border-top: 1px solid #d9dee2
+    margin-bottom: 100px
+
+
+.es-theme-showcase
+  width: 100% !important
+  max-width: 990px
+  padding-left: 20px
+  padding-right: 20px
+  +r(991)
+    flex-direction: column
+  +r(767)
+    padding-left: 10px
+    padding-right: 10px
+
+.es-rightmenu
+  .selectric-menu
+    display: none
+  .selectric
+    border: 1px solid rgb(217, 222, 226)
+    border-radius: 5px
+    background-color: rgb(245, 248, 250)
+    box-shadow: 0px 6px 15px 0px rgba(240, 245, 248, 0.004)
+    transition: .25s $ease
+    .label
+      text-align: left
+      font-size: 14px
+      font-weight: normal
+  .selectric-open
+    .selectric
+      border-bottom-left-radius: 0px
+      border-bottom-right-radius: 0px
+  .selectric-items
+    background: white
+    border: 1px solid rgb(241, 241, 241)
+    border-radius: 5px
+    box-shadow: 0px 15px 34px 0px rgba(240, 245, 248, 0.004)
+
+  .selectric-items
+    li
+      font-size: 14px
+      padding: 0
+      margin: 0
+      &:hover
+        background: transparent
+      &.selected
+        background: #f5f8fa
+        font-weight: bold
+    a
+      display: block
+      width: 100%
+      padding: 8px 15px
+      background: transparent
+      border-radius: 0px
+      border: 0
+      box-shadow: none
+      transition: .25s $ease
+      &:hover
+        border: 0
+        background: #f5f8fa
+
+
++r(991)
+  .es-rightmenu
+    position: relative
+    z-index: 2
+    flex: 0 0 auto
+    width: 100%
+    max-width: 300px
+    padding-bottom: 20px
+    > ul
+      // select to be shown with js
+      display: none
+    .selectric-menu
+      display: block
+
+  .es-right-column
+    flex: 0 0 auto
+    padding-left: 0
+    border-left: 0
+    width: 100%
+
++r(767)
+  .es-rightmenu
+    padding-bottom: 15px
+    
+  .es-right-column
+    border-top: 1px solid #d9dee2
+    padding-top: 15px

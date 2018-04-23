@@ -2,32 +2,32 @@ ProjectTitle: REA
 
 PageList:
 - file: login.html
-  ready: 50
+  ready: 90
 - file: lk.html
-  ready: 50
+  ready: 60
 - file: grades.html
-  ready: 50
+  ready: 60
 - file: request.html
-  ready: 50
+  ready: 60
 - file: request-new.html
-  ready: 50
+  ready: 60
 - file: request-page.html
-  ready: 50
+  ready: 60
 - file: shcedule.html
-  ready: 50
+  ready: 60
 - file: feedback.html
-  ready: 50
+  ready: 60
 - file: ads.html
-  ready: 50
+  ready: 60
 - file: curriculum.html
-  ready: 50
+  ready: 60
 - file: curriculum-files.html
   ready: 0
 - file: rating.html
   ready: 0
 - file: ito.html
-  ready: 50
+  ready: 60
 - file: portfolio.html
-  ready: 50
+  ready: 60
 - file: settings.html
-  ready: 50
+  ready: 60

@@ -1,0 +1,181 @@
+
+// HEADER
+.menu-toggle
+  flex: 0 0 40px
+
+.user-menu
+  // position: relative
+  flex: 0 0 30px
+  padding-left: 0px
+  padding-right: 15px
+  transition: .25s $ease
+  &__toggle
+    color: white
+    font-size: 17px
+    cursor: pointer
+    &:hover
+      color: rgba(white, .7)
+  &__drop
+    position: absolute
+    top: 32px
+    left: 0
+    right: 0
+    padding: 12px 10px
+    background: white
+    color: #333333
+    border-bottom: 1px solid #d9dee2
+    transition: .25s $ease
+    transform: translate3d(20px,0,0)
+    opacity: 0
+    pointer-events: none
+    &.is-active
+      opacity: 1
+      transform: translate3d(0,0,0)
+      pointer-events: all
+    &-top
+      display: flex
+    &-name
+      flex: 0 1 auto
+      width: 100%
+      min-width: 1px
+      font-size: 18px
+      font-weight: bold
+      overflow: hidden
+      padding-right: 10px
+      +text-overflow
+      a
+        color: inherit
+    &-facility
+      padding-top: 5px
+      font-size: 15px
+      text-decoration: underline
+      a
+        color: #398fcc
+    .es-user__info__login
+      flex: 0 0 auto
+      margin-left: auto
+
+
+
+
++r(991)
+  .top-black-menu
+    position: relative
+    z-index: 10
+    .row
+      display: flex
+      align-items: center
+    .col-xs-3
+      flex: 0 0 302px
+      width: 302px
+      margin-left: auto
+
+  // header wrapper
+  .header-wrapper
+    .row
+      display: flex
+      align-items: center
+
+    // logo mark holder
+    .col-xs-2
+      flex: 0 0 85px
+      width: 85px
+
+  .logotextwrap
+    padding-left: 5px
+    padding-top: 9px
+    br
+      display: none
+    h1
+      margin: 0
+      line-height: 0.8
+
+  .header-mid-logo-title-name, .header-mid-logo-title-big-font, .header-mid-logo-title-name
+    font-size: 17px
+    line-height: 1
+
+  .header-mid-logo-title-name
+    display: inline-block
+    &:first-child
+      display: block
+  .header-mid-logo-title-big-font
+    display: inline-block
+
+/* mobile
++r(767)
+  .top-black-menu
+    .col-xs-3
+      flex: 0 0 257px
+      width: 257px
+      padding-left: 0
+
+  .header-wrapper
+    padding-top: 12px
+
+    .col-xs-2
+      flex: 0 0 63px
+      width: 63px
+      padding-right: 10px
+
+  .userinfowrap
+    display: none
+
+  .logotextwrap
+    padding-top: 4px
+    width: 100%
+    padding-left: 0
+
+  .header-mid-logo-title-name, .header-mid-logo-title-big-font, .header-mid-logo-title-name
+    font-size: 15px
+    line-height: 0.9
+
+
+  .bluemenu
+    display: none
+
+.bluemenu .container
+  width: 100% !important
+  padding: 0 20px
+  +r(767)
+    padding: 0 10px
+
+/* LK like modifier
+.es-header-wrapper
+  max-width: 990px
+  padding-left: 20px
+  padding-right: 20px
+
++r(991)
+  .es-header-wrapper
+    padding-top: 15px
+    padding-bottom: 15px
+
+  .es-headlogowrap
+    width: 55px
+    margin-right: 20px
+  .es-logotextwrap
+    padding-top: 3px
+    h1
+      font-size: 17px
+      line-height: 1.4
+
+
++r(767)
+  .es-header-wrapper
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 8px
+    padding-bottom: 10px
+
+  .es-headlogowrap
+    width: 38px
+    margin-right: 10px
+
+  .es-logotextwrap
+    padding-top: 4px
+    h1
+      font-size: 15px
+
+  // * should be in icon
+  .es-userinfowrap
+    display: none

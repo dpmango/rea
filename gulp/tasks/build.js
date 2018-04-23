@@ -20,6 +20,7 @@ function build(callback) {
     'clean:dist',
     'sprite:svg',
     'sprite:png',
+    'javascript',
     'sass',
     'list-pages',
     'copy',
