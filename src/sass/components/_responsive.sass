@@ -191,9 +191,10 @@ body
     padding-top: 15px
 
 
-.es-progress__line-item, .request__list
+.es-progress__line-item, .request__list, .es-curriculum__line-item, .es-portfolio__line-item
   span.for-mobile
     display: none
+    color: #999999 !important
 .appeal__content__head_contact
   &--mobile
     display: none
@@ -353,15 +354,7 @@ body
   .request__list
     margin-top: 10px
     border-top: 1px solid #e7e7e7
-        // &::after
-        //   display: inline-block
-        //   content: ' '
-        //   position: absolute
-        //   bottom: 0
-        //   left: 10px
-        //   right: 0
-        //   height: 1px
-        //   background: #e7e7e7
+
   .request__list-header
     display: none
   .request__list-body
@@ -501,6 +494,147 @@ body
   table.table.table_lessons>tbody>tr>td
     padding: 5px 10px
     line-height: 1.25
+
+
+  /* curriculum
+  .es-curriculum__title
+    font-size: 22px
+    margin-top: 0
+    margin-bottom: 12px
+  .es-curriculum__tab-head
+    display: block
+    border-bottom: 1px solid #eaeaea
+    padding-bottom: 20px
+  .es-curriculum__btn
+    display: block
+    width: 100%
+    max-width: 400px
+    margin-bottom: 12px
+    padding: 4px 10px
+  .es-curriculum__tab-head__selector
+    width: 100%
+  .es-curriculum__tab-head__item
+    flex: 0 0 50%
+    flex-wrap: wrap
+    margin-left: 0
+    padding-right: 10px
+  .es-curriculum__tab-head__item__label
+    display: block
+    width: 100%
+
+  .es-curriculum__line:first-child
+    display: none
+  .es-curriculum__tab-body
+    padding-top: 0
+  .es-curriculum__line
+    flex-wrap: wrap
+    padding: 10px 0 0
+    margin-top: 6px
+    &:last-child
+      border-bottom: 0
+  .es-curriculum__line-item
+    width: 100%
+    margin-right: 0
+    margin-bottom: 10px
+    display: flex
+    span.for-mobile
+      display: inline-block
+      width: 150px
+      flex-shrink: 0
+  .es-curriculum__discipline
+    order: 1
+    span.for-mobile
+      display: none
+  .es-curriculum__cipher
+    order: 2
+  .es-curriculum__form
+    order: 3
+  .es-curriculum__laboriousness
+    position: relative
+    order: 4
+    margin-bottom: 40px
+    &::after
+      display: inline-block
+      position: absolute
+      bottom: -35px
+      padding-bottom: 5px
+      color: #999
+      font-size: 13px
+      left: 0
+      content: 'Трудоемкость в часах'
+      width: 100%
+      border-bottom: 1px solid #eaeaea
+
+  .es-curriculum__several-items
+    order: 5
+
+  .es-curriculum__total, .es-curriculum__control, .es-curriculum__lectures, .es-curriculum__practical, .es-curriculum__laboratory
+    order: 6
+    flex-wrap: wrap
+    width: 60px
+    span.for-mobile
+      display: block
+      width: 100%
+
+  /* ito
+  .ito-title
+    margin-top: 0
+    font-size: 22px
+    line-height: 1.1
+  .ito
+    h3
+      font-size: 18px
+      margin-top: 0
+
+
+  /* portfolio
+  .es-portfolio__title
+    margin-top: 0
+    font-size: 22px
+    margin-bottom: 12px
+
+  .es-portfolio__tab-head
+    flex-wrap: wrap
+  .es-portfolio__tab-head__selector
+    display: block
+  .es-portfolio__tab-head__item
+    display: block
+    width: 100%
+    max-width: 400px
+    margin-bottom: 15px
+  .es-portfolio__tab-head__item__label
+    display: block
+
+  .es-portfolio__tab-body
+    border-top: 1px solid #eaeaea
+    margin-top: 10px
+    padding-top: 10px
+  .es-portfolio__tab-footnote
+    margin-top: 5px
+
+
+  /* table
+  .es-portfolio__tab-body-item
+    .es-portfolio__line:first-child
+      display: none
+
+  .request__list-body
+
+  .es-portfolio__line
+    flex-wrap: wrap
+    padding: 10px 0 10px
+    div
+      width: 100%
+      margin-right: 0
+      margin-bottom: 10px
+
+  .es-portfolio__line-item
+    flex-wrap: wrap
+    span.for-mobile
+      display: block
+      width: 150px
+      flex-shrink: 0
+
 
   /* modal
   .fakultet__selector__title

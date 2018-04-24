@@ -1569,7 +1569,6 @@ $(document).ready(function(){
       head.each(function(i, tr){
         headNames.push( $(tr).html() )
       })
-      console.log(headNames)
       rows.each(function(i, tr){
         var td = $(tr).find('div')
         td.each(function(i, td){
@@ -1582,6 +1581,56 @@ $(document).ready(function(){
       })
     });
   }
+
+  /// CURRICULUM TABLE
+  if (  $('.es-curriculum__tab-body-item').length > 0 ){
+    $('.es-curriculum__tab-body-item').each(function(i, table){
+      var table = $(table);
+      var head = table.find('.es-curriculum__line:first-child > div');
+      var headNames = [];
+      var rows = table.find('.es-curriculum__line:not(:first-child)');
+      head.each(function(i, tr){
+        if ( $(tr).is('.es-curriculum__several-items') ){
+          $(tr).find('.es-curriculum__line-item').each(function(i,sub){
+            headNames.push( $(sub).html() )
+          })
+        } else {
+          headNames.push( $(tr).html() )
+        }
+      })
+
+      rows.each(function(i, tr){
+        var td = $(tr).find(".es-curriculum__line-item")
+        td.each(function(i, td){
+          if ( i == 3 || i == 4 || i == 5 || i == 6 || i == 7 ){
+            $(td).html("<span>"+ $(td).html() +"</span>")
+          }
+          $(td).prepend('<span class="for-mobile">'+ headNames[i] +'</span>')
+        })
+      })
+    });
+  }
+
+  /// PORTFOLIO TABLE
+  if (  $('.es-portfolio__tab-body').length > 0 ){
+    $('.es-portfolio__tab-body').each(function(i, table){
+      var table = $(table);
+      var head = table.find('.es-portfolio__line:first-child div');
+      var headNames = [];
+      var rows = table.find('.es-portfolio__line:not(:first-child)');
+      head.each(function(i, tr){
+        headNames.push( $(tr).html() )
+      })
+      rows.each(function(i, tr){
+        var td = $(tr).find('.es-portfolio__line-item')
+        td.each(function(i, td){
+
+          $(td).prepend('<span class="for-mobile">'+ headNames[i] +'</span>')
+        })
+      })
+    });
+  }
+
 
   // SHEDULE TABLE COLORS
   if ( $('.table_lessons').length > 0 ) {

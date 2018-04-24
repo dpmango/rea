@@ -20,14 +20,14 @@ PageList:
 - file: ads.html
   ready: 90
 - file: curriculum.html
-  ready: 60
+  ready: 90
 - file: curriculum-files.html
   ready: 0
 - file: rating.html
   ready: 0
 - file: ito.html
-  ready: 60
+  ready: 90
 - file: portfolio.html
-  ready: 60
+  ready: 90
 - file: settings.html
-  ready: 70
+  ready: 90
