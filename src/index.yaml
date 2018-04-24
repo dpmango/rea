@@ -4,21 +4,21 @@ PageList:
 - file: login.html
   ready: 90
 - file: lk.html
-  ready: 60
+  ready: 90
 - file: grades.html
-  ready: 60
+  ready: 90
 - file: request.html
-  ready: 60
+  ready: 90
 - file: request-new.html
-  ready: 60
+  ready: 90
 - file: request-page.html
-  ready: 60
+  ready: 90
 - file: shcedule.html
-  ready: 60
+  ready: 90
 - file: feedback.html
-  ready: 60
+  ready: 90
 - file: ads.html
-  ready: 60
+  ready: 90
 - file: curriculum.html
   ready: 60
 - file: curriculum-files.html
@@ -30,4 +30,4 @@ PageList:
 - file: portfolio.html
   ready: 60
 - file: settings.html
-  ready: 60
+  ready: 70

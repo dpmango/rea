@@ -142,7 +142,7 @@
               </button>
             </div>
           </div>
-          <!-- user menu for mobile --> 
+          <!-- user menu for mobile -->
           <div class="show-mobile user-menu">
             <div class="user-menu__toggle js-toggle-user-nav">
               <svg class="ico ico-user">
@@ -369,19 +369,20 @@
               </label>
             </form>
           </div>
+          <div class="es-personal__data__fio show-mobile" data-teleport-target="personal-fio"></div>
           <div class="personal__data">
-            <div class="es-personal__data__fio">
+            <div class="es-personal__data__fio js-teleport" data-teleport-to="personal-fio" data-teleport-condition="<767">
               Иванов Иван Иванович
             </div>
             <div class="personal__tabs">
               <ul class="personal__tabs-header">
                 <li class="active"><a href="#">Основные контакты</a></li>
-                <li ><a href="#" class="personal__tabs-header__addition-cont">Дополнительные контакты</a></li>
+                <li ><a href="#" class="personal__tabs-header__addition-cont">Дополнительные <span class="hidden-mobile-inline">контакты</span></a></li>
               </ul>
               <div class="personal__tabs-content">
                 <div class="tab-item tab1">
                   <div class="contact__item">
-                    <div class="contact__item-name">Мобильный телефон</div>
+                    <div class="contact__item-name">Моб<span class="visible-mobile-inline">.</span><span class="hidden-mobile-inline">ильный</span> телефон</div>
                     <div class="contact__item-data">+79991234567</div>
                   </div>
                   <div class="contact__item">
@@ -393,7 +394,7 @@
                   <form action="/local/components/sebekon/personal.page/ajax.php" name="update_email" id="update_email" method="POST">
                     <input type="hidden" name="sessid" id="sessid_1" value="31a71f35659f9cea4287ef374e82b6d1" />
                     <div class="contact__item">
-                      <div class="contact__item-name">Мобильный телефон</div>
+                      <div class="contact__item-name">Моб<span class="visible-mobile-inline">.</span><span class="hidden-mobile-inline">ильный</span> телефон</div>
                       <div class="contact__item-data"
                         data-phone></div>
                     </div>
