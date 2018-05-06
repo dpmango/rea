@@ -22,9 +22,11 @@ PageList:
 - file: curriculum.html
   ready: 90
 - file: curriculum-files.html
-  ready: 0
+  ready: 20
+- file: curriculum-files-2.html
+  ready: 20
 - file: rating.html
-  ready: 0
+  ready: 20
 - file: ito.html
   ready: 90
 - file: portfolio.html
