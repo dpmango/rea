@@ -8,7 +8,7 @@
     <!-- this is temp for development -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1200px">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <meta name="author" content="IT Sphere">
     <title>Рейтинг</title>
     <link rel="shortcut icon" type="image/x-icon" href="/local/templates/reapay_bootstrap_personal/favicon.ico" />
@@ -184,39 +184,91 @@
         </div>
     </div>
     <div class="top-black-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-2">
-                    <ul class="lang-selector">
-                        <li class="active">Рус</li>
-                        <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
-                        <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-7">
-
-                    <ul class="main-website-menu">
-                        <li><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
-                        <li><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
-                        <li><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
-                        <li><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
-                        <li><a href="http://alumni.rea.ru/">Выпускникам</a></li>
-                        <li><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-3">
-                    <div class="top-search">
-
-                        <input id="header-search" type="text" placeholder="Поиск по сайту" onkeydown="if (event.keyCode==13) return cabinetsearch(value);">
-
-                        <button class="top-search-btn" onclick="">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col menu-toggle show-tablet">
+            <div class="hamburger hamburger--squeeze js-open-mobile-menu">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
             </div>
+          </div>
+          <div class="col-xs-2 show-desktop">
+            <ul class="lang-selector">
+              <li class="active">Рус</li>
+              <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
+              <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-7 show-desktop">
+            <ul class="main-website-menu">
+              <li ><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
+              <li ><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
+              <li ><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
+              <li ><a href="http://alumni.rea.ru/">Выпускникам</a></li>
+              <li ><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-3">
+            <div class="top-search">
+              <input id="header-search" type="text" placeholder="Поиск по сайту" onkeydown="if (event.keyCode==13) return cabinetsearch(value);">
+              <button class="top-search-btn" onclick="">
+              <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+          <!-- user menu for mobile -->
+          <div class="show-mobile user-menu">
+            <div class="user-menu__toggle js-toggle-user-nav">
+              <svg class="ico ico-user">
+                <use xlink:href="http://localhost:3000/img/sprite.svg#ico-user"></use>
+              </svg>
+            </div>
+            <div class="user-menu__drop">
+              <div class="user-menu__drop-top">
+                <div class="user-menu__drop-name">
+                  <a href="/personal/">Иванов Иван Иванович</a>
+                </div>
+                <div class="es-user__info__login">
+                  <a href="/?logout=yes">
+                  <span>
+                  Выйти                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="user-menu__drop-facility">
+                <a href="#">3-й курс, финансовый факультет</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <!-- mobile menu componenet -->
+    <div class="m-menu">
+      <div class="m-menu__wrapper">
+        <div class="m-menu__close">
+          <div class="hamburger hamburger--squeeze is-active js-close-mobile-menu">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <ul class="m-menu__menu">
+          <li ><a href="http://www.rea.ru/ru/org/managements/priem/Pages/economicheskiy_licey.aspx">Лицей</a></li>
+          <li ><a href="http://www.rea.ru/ru/org/managements/Pages/priem.aspx">Абитуриенту</a></li>
+          <li ><a href="http://www.rea.ru/ru/Pages/Studentu.aspx">Студенту</a></li>
+          <li ><a href="http://www.rea.ru/ru/Pages/employee.aspx">Сотруднику</a></li>
+          <li ><a href="http://alumni.rea.ru/">Выпускникам</a></li>
+          <li ><a href="http://www.rea.ru/ru/pages/contacts.aspx">Контакты</a></li>
+        </ul>
+        <ul class="lang-selector m-menu__lang">
+          <li class="active">Рус</li>
+          <li><a href="http://www.rea.ru/en/pages/default.aspx">Eng</a></li>
+          <li><a href="http://www.rea.ru/cn/default.aspx">中文</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="es-header-wrapper">
@@ -311,7 +363,9 @@
 
     <div class="es-theme-showcase">
         <div class="es-rightmenu">
-
+            <div class="selectric-menu">
+              <select name="mobile-nav" class="js-selectric"></select>
+            </div>
             <ul>
                 <li>
                     <a href="/personal/">
@@ -564,49 +618,50 @@
     </div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-
-                    В Личном кабинете обучаемого принимаются к оплате карты следующих платежных систем:
-
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/visa.png" class="img-responsive" />
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/visa_v.png" class="img-responsive" />
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/mc.png" class="img-responsive" />
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/mc_v.png" class="img-responsive" />
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/mir.png" class="img-responsive" />
-                </div>
-
-                <div class="col-sm-1">
-                    <img src="/images/mir_v.png" class="img-responsive" />
-                </div>
-                <div class="col-sm-2">
-                    <a href="/appeal/?appeal_topic=lk_error" class="support-link">
-                        Техподдержка
-                    </a>
-                    <br>
-                    <a href="http://studinfo.rea.ru/" class="support-link" target="_blank">
-                        Помощь
-                    </a>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            В Личном кабинете обучаемого
+            принимаются к оплате карты
+            следующих платежных систем:
+          </div>
+          <div class="col-sm-6 col-md-6 footer__logos">
+            <div class="footer__logo">
+              <img src="/images/visa.png" class="img-responsive" />
             </div>
-
+            <div class="footer__logo">
+              <img src="/images/visa_v.png" class="img-responsive" />
+            </div>
+            <div class="footer__logo">
+              <img src="/images/mc.png" class="img-responsive" />
+            </div>
+            <div class="footer__logo">
+              <img src="/images/mc_v.png" class="img-responsive" />
+            </div>
+            <div class="footer__logo">
+              <img src="/images/mir.png" class="img-responsive" />
+            </div>
+            <div class="footer__logo">
+              <img src="/images/mir_v.png" class="img-responsive" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-2 tex-link">
+            <a
+              href="mailto:lks-temp@rea.ru"
+              class="support-link"
+              >
+            Техподдержка
+            </a>
+            <br>
+            <a
+              href="#"
+              class="support-link"
+              >
+            Помощь
+            </a>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
