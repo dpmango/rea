@@ -1,9 +1,10 @@
 // REWRITES
-body
+body, html
   // background-color: red
   min-width: 320px
   max-width: 100%
   overflow-x: hidden
+
 
 .container
   max-width: 980px
@@ -54,6 +55,7 @@ body
 // GENERAL ELEMENTS
 
 +r(767)
+  footer
   h2
     font-size: 22px
     margin-bottom: 0.5em
@@ -191,7 +193,7 @@ body
     padding-top: 15px
 
 
-.es-progress__line-item, .request__list, .es-curriculum__line-item, .es-portfolio__line-item
+.es-progress__line-item, .request__list, .es-curriculum__line-item, .es-portfolio__line-item, .es-rating__line-item
   span.for-mobile
     display: none
     color: #999999 !important
@@ -632,6 +634,41 @@ body
     flex-wrap: wrap
     span.for-mobile
       display: block
+      width: 150px
+      flex-shrink: 0
+
+
+  .es-right-column h1
+    font-size: 22px
+    margin-top: 0
+    margin-bottom: 12px
+
+  .filemanager-list
+    font-size: 14px
+  .ico-file-type
+    transform: translateY(-2px)
+
+
+  /* rating
+  .es-rating__tab-head
+    margin-bottom: 12px
+
+  .es-rating__line:first-child
+    display: none
+  .es-rating__tab-body
+    padding-top: 0
+  .es-rating__line
+    flex-wrap: wrap
+    padding: 10px 0
+    &:last-child
+      border-bottom: 0
+  .es-rating__line-item
+    width: 100%
+    margin-right: 0
+    margin-bottom: 10px
+    display: flex
+    span.for-mobile
+      display: inline-block
       width: 150px
       flex-shrink: 0
 

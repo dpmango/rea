@@ -22,9 +22,9 @@ PageList:
 - file: curriculum.html
   ready: 90
 - file: curriculum-files.html
-  ready: 50
+  ready: 90
 - file: curriculum-files-2.html
-  ready: 50
+  ready: 90
 - file: rating.html
   ready: 50
 - file: ito.html

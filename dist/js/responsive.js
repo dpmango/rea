@@ -1559,6 +1559,7 @@ $(document).ready(function(){
     });
   }
 
+
   /// REQUEST TABLE
   if (  $('.request__list').length > 0 ){
     $('.request__list').each(function(i, table){
@@ -1631,6 +1632,30 @@ $(document).ready(function(){
     });
   }
 
+  /// RATING TABLE
+  if (  $('.es-rating__tab-body-item').length > 0 ){
+    $('.es-rating__tab-body-item').each(function(i, table){
+      var table = $(table);
+      var head = table.find('.es-rating__line:first-child .es-rating__line-item');
+      var headNames = [];
+      var rows = table.find('.es-rating__line:not(:first-child)');
+      head.each(function(i, tr){
+        headNames.push( $(tr).html() )
+      })
+      rows.each(function(i, tr){
+        var td = $(tr).find('.es-rating__line-item')
+
+        td.each(function(i, td){
+          // ignore first (tr header)
+          if ( i == 0 ){
+            return
+          }
+          $(td).prepend('<span class="for-mobile">'+ headNames[i] +'</span>')
+        })
+      })
+    });
+  }
+
 
   // SHEDULE TABLE COLORS
   if ( $('.table_lessons').length > 0 ) {
@@ -1653,10 +1678,8 @@ $(document).ready(function(){
         }
       })
     }
-
     setTableColors();
     _window.on('resize', debounce(setTableColors, 200));
-
 
   }
 
